@@ -1,2 +1,41 @@
 Plugins:
 	Can know about the game, game cannot know about the plugin.
+
+Heiarchy: 
+Engine
+	Plugin
+		Game.
+
+Not ideal: do not stack plugins. 
+
+
+API tags expose our classes to the engine for manipulation.
+if we do not want to expose it, we remove that tag. 
+
+
+State Machine: 
+Data -> Graph of nodes connected by branches. 
+	So when we create it, we use Data Asset. 
+
+Data Asset:
+	Turns off features we do not need to best create our nodes for our states. 
+
+DFA and NFA's:
+
+Finite Automoton: 
+	DFA : Deterministic Finite Automoton
+	NFA : Non-Deterministic Finite Automoton
+
+	Difference between the two:
+		If you run a computer program. You cannot tell if the program is going to finish or get stuck in some infinite loop. 
+	
+	
+so we're constructing a DFA:
+	This means we're going to have a finite amount of steps that will have the states of Not Accepted, accepted, rejected, and out of steps. 
+
+
+
+USM_Branch:
+	Did I get there? If so, where?
+	This will return where it got to or null on failure.  
+
