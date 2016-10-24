@@ -1,0 +1,2 @@
+Plugins:
+	Can know about the game, game cannot know about the plugin.
