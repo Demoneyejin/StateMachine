@@ -35,7 +35,7 @@ struct STATEMACHINE_API FStateMachineResult{
 	USM_State* FinalState;
 
 	UPROPERTY()
-	int32 DataIndex;
+	uint32 DataIndex;
 
 };
 
@@ -60,7 +60,7 @@ public:
 	    OutDataIndex might be something other than 1, if a branch is made to consume multiple inputs.*/
 
 	virtual USM_State* TryBranch(const UObject* RefObject, const TArray<USM_InputAtom*>&  DataSource,
-		int32 DataIndex, int32 *OutDataIndex);
+		uint32 DataIndex, uint32 *OutDataIndex);
 	
 protected:
 
@@ -98,14 +98,15 @@ public:
 	   Will decrement RemainingSteps and automatically fail after it hits 0.
 	   */
 	UFUNCTION(BlueprintCallable, Category = "State Machine")
-		virtual FStateMachineResult RunState(const UObject* RefObject, const TArray<USM_InputAtom*>& DataSource, int32 DataIndex = 0,
-			int32 RemainingSteps = -1);
+		virtual FStateMachineResult RunState(const UObject* RefObject, const TArray<USM_InputAtom*>& DataSource, int32 DataIndex/* = 0*/,
+			uint32 RemainingSteps/* = -1*/);
 
-protected:
+p
+rotected:
 
 	// Loop. Used when input atom being processed isn't recognized. 
-	virtual FStateMachineResult LoopState(const UObject* RefObject, const TArray<USM_InputAtom*>& DataSource, int32 DataIndex = 0,
-		int32 RemainingSteps);
+	virtual FStateMachineResult LoopState(const UObject* RefObject, const TArray<USM_InputAtom*>& DataSource, uint32 DataIndex = 0,
+		uint32 RemainingSteps);
 
 
 	// If input runs out on this state( or TerminateImmediate is true). This is how the result will be interpreted.
