@@ -8,38 +8,216 @@
 #include "ObjectBase.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UObject;
+class USM_InputAtom;
+struct FStateMachineResult;
 #ifdef STATEMACHINE_SM_State_generated_h
 #error "SM_State.generated.h already included, missing '#pragma once' in SM_State.h"
 #endif
 #define STATEMACHINE_SM_State_generated_h
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_14_RPC_WRAPPERS
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_14_RPC_WRAPPERS_NO_PURE_DECLS
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_14_INCLASS_NO_PURE_DECLS \
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_31_GENERATED_BODY \
+	friend STATEMACHINE_API class UScriptStruct* Z_Construct_UScriptStruct_FStateMachineResult(); \
+	static class UScriptStruct* StaticStruct();
+
+
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_RPC_WRAPPERS
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_RPC_WRAPPERS_NO_PURE_DECLS
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_INCLASS_NO_PURE_DECLS \
 	private: \
-	static void StaticRegisterNativesUSM_State(); \
-	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_State(); \
+	static void StaticRegisterNativesUSM_InputAtom(); \
+	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_InputAtom(); \
 	public: \
-	DECLARE_CLASS(USM_State, UDataAsset, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/StateMachine"), NO_API) \
-	DECLARE_SERIALIZER(USM_State) \
+	DECLARE_CLASS(USM_InputAtom, UDataAsset, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/StateMachine"), NO_API) \
+	DECLARE_SERIALIZER(USM_InputAtom) \
 	/** Indicates whether the class is compiled into the engine */ \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_14_INCLASS \
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_INCLASS \
 	private: \
-	static void StaticRegisterNativesUSM_State(); \
-	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_State(); \
+	static void StaticRegisterNativesUSM_InputAtom(); \
+	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_InputAtom(); \
 	public: \
-	DECLARE_CLASS(USM_State, UDataAsset, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/StateMachine"), NO_API) \
-	DECLARE_SERIALIZER(USM_State) \
+	DECLARE_CLASS(USM_InputAtom, UDataAsset, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/StateMachine"), NO_API) \
+	DECLARE_SERIALIZER(USM_InputAtom) \
 	/** Indicates whether the class is compiled into the engine */ \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_14_STANDARD_CONSTRUCTORS \
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API USM_State(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API USM_InputAtom(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USM_InputAtom) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USM_InputAtom); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USM_InputAtom); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API USM_InputAtom(USM_InputAtom&&); \
+	NO_API USM_InputAtom(const USM_InputAtom&); \
+public:
+
+
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API USM_InputAtom(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API USM_InputAtom(USM_InputAtom&&); \
+	NO_API USM_InputAtom(const USM_InputAtom&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USM_InputAtom); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USM_InputAtom); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USM_InputAtom)
+
+
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_43_PROLOG
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_RPC_WRAPPERS \
+	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_INCLASS \
+	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_RPC_WRAPPERS_NO_PURE_DECLS \
+	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_INCLASS_NO_PURE_DECLS \
+	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_RPC_WRAPPERS
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_RPC_WRAPPERS_NO_PURE_DECLS
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_INCLASS_NO_PURE_DECLS \
+	private: \
+	static void StaticRegisterNativesUSM_Branch(); \
+	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_Branch(); \
+	public: \
+	DECLARE_CLASS(USM_Branch, UDataAsset, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/StateMachine"), NO_API) \
+	DECLARE_SERIALIZER(USM_Branch) \
+	/** Indicates whether the class is compiled into the engine */ \
+	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
+
+
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_INCLASS \
+	private: \
+	static void StaticRegisterNativesUSM_Branch(); \
+	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_Branch(); \
+	public: \
+	DECLARE_CLASS(USM_Branch, UDataAsset, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/StateMachine"), NO_API) \
+	DECLARE_SERIALIZER(USM_Branch) \
+	/** Indicates whether the class is compiled into the engine */ \
+	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
+
+
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API USM_Branch(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USM_Branch) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USM_Branch); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USM_Branch); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API USM_Branch(USM_Branch&&); \
+	NO_API USM_Branch(const USM_Branch&); \
+public:
+
+
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API USM_Branch(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API USM_Branch(USM_Branch&&); \
+	NO_API USM_Branch(const USM_Branch&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USM_Branch); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USM_Branch); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USM_Branch)
+
+
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_54_PROLOG
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_RPC_WRAPPERS \
+	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_INCLASS \
+	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_RPC_WRAPPERS_NO_PURE_DECLS \
+	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_INCLASS_NO_PURE_DECLS \
+	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execRunState) \
+	{ \
+		P_GET_OBJECT(UObject,Z_Param_RefObject); \
+		P_GET_TARRAY_REF(USM_InputAtom*,Z_Param_Out_DataSource); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_DataIndex); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_RemainingSteps); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(FStateMachineResult*)Z_Param__Result=this->RunState(Z_Param_RefObject,Z_Param_Out_DataSource,Z_Param_DataIndex,Z_Param_RemainingSteps); \
+		P_NATIVE_END; \
+	}
+
+
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execRunState) \
+	{ \
+		P_GET_OBJECT(UObject,Z_Param_RefObject); \
+		P_GET_TARRAY_REF(USM_InputAtom*,Z_Param_Out_DataSource); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_DataIndex); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_RemainingSteps); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(FStateMachineResult*)Z_Param__Result=this->RunState(Z_Param_RefObject,Z_Param_Out_DataSource,Z_Param_DataIndex,Z_Param_RemainingSteps); \
+		P_NATIVE_END; \
+	}
+
+
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_INCLASS_NO_PURE_DECLS \
+	private: \
+	static void StaticRegisterNativesUSM_State(); \
+	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_State(); \
+	public: \
+	DECLARE_CLASS(USM_State, UDataAsset, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/StateMachine"), NO_API) \
+	DECLARE_SERIALIZER(USM_State) \
+	/** Indicates whether the class is compiled into the engine */ \
+	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
+
+
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_INCLASS \
+	private: \
+	static void StaticRegisterNativesUSM_State(); \
+	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_State(); \
+	public: \
+	DECLARE_CLASS(USM_State, UDataAsset, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/StateMachine"), NO_API) \
+	DECLARE_SERIALIZER(USM_State) \
+	/** Indicates whether the class is compiled into the engine */ \
+	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
+
+
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API USM_State(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USM_State) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USM_State); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USM_State); \
@@ -50,9 +228,7 @@ private: \
 public:
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_14_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API USM_State(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API USM_State(USM_State&&); \
@@ -60,26 +236,26 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USM_State); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USM_State); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USM_State)
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(USM_State)
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_11_PROLOG
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_14_GENERATED_BODY_LEGACY \
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_82_PROLOG
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_14_RPC_WRAPPERS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_14_INCLASS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_14_STANDARD_CONSTRUCTORS \
+	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_RPC_WRAPPERS \
+	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_INCLASS \
+	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_14_GENERATED_BODY \
+#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_14_INCLASS_NO_PURE_DECLS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_14_ENHANCED_CONSTRUCTORS \
+	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_RPC_WRAPPERS_NO_PURE_DECLS \
+	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_INCLASS_NO_PURE_DECLS \
+	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -88,4 +264,9 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #define CURRENT_FILE_ID StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h
 
 
+#define FOREACH_ENUM_ESTATEMACHINECOMPLETIONTYPE(op) \
+	op(EStateMachineCompletionType::NotAccepted) \
+	op(EStateMachineCompletionType::Accepted) \
+	op(EStateMachineCompletionType::Rejected) \
+	op(EStateMachineCompletionType::OutOfSteps) 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
