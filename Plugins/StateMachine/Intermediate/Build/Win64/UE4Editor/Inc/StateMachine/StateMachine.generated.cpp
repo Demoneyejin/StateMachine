@@ -57,7 +57,7 @@ static struct FScriptStruct_StateMachine_StaticRegisterNativesFStateMachineResul
 	{
 		FNativeFunctionRegistrar::RegisterFunction(USM_State::StaticClass(), "RunState",(Native)&USM_State::execRunState);
 	}
-	IMPLEMENT_CLASS(USM_State, 357858039);
+	IMPLEMENT_CLASS(USM_State, 3284690260);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	COREUOBJECT_API class UClass* Z_Construct_UClass_UObject();
@@ -299,6 +299,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				OuterClass->LinkChild(Z_Construct_UFunction_USM_State_RunState());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_SharedBranches = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("SharedBranches"), RF_Public|RF_Transient|RF_MarkAsNative) UArrayProperty(CPP_PROPERTY_BASE(SharedBranches, USM_State), 0x0020080000000001);
+				UProperty* NewProp_SharedBranches_Inner = new(EC_InternalUseOnlyConstructor, NewProp_SharedBranches, TEXT("SharedBranches"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(FObjectInitializer(), EC_CppProperty, 0, 0x0000000000000000, Z_Construct_UClass_USM_Branch_NoRegister());
 				UProperty* NewProp_InstancedBranches = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("InstancedBranches"), RF_Public|RF_Transient|RF_MarkAsNative) UArrayProperty(CPP_PROPERTY_BASE(InstancedBranches, USM_State), 0x0020088000000009);
 				UProperty* NewProp_InstancedBranches_Inner = new(EC_InternalUseOnlyConstructor, NewProp_InstancedBranches, TEXT("InstancedBranches"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(FObjectInitializer(), EC_CppProperty, 0, 0x0002000000080008, Z_Construct_UClass_USM_Branch_NoRegister());
 				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bLoopByDefault, USM_State, uint8);
@@ -313,6 +315,9 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("SM_State.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("Classes/SM_State.h"));
+				MetaData->SetValue(NewProp_SharedBranches, TEXT("Category"), TEXT("SM_State"));
+				MetaData->SetValue(NewProp_SharedBranches, TEXT("ModuleRelativePath"), TEXT("Classes/SM_State.h"));
+				MetaData->SetValue(NewProp_SharedBranches, TEXT("ToolTip"), TEXT("Branches to other states. these are in priority order, so the first successful branch will be taken. these run after instacned Branches."));
 				MetaData->SetValue(NewProp_InstancedBranches, TEXT("Category"), TEXT("SM_State"));
 				MetaData->SetValue(NewProp_InstancedBranches, TEXT("EditInline"), TEXT("true"));
 				MetaData->SetValue(NewProp_InstancedBranches, TEXT("ModuleRelativePath"), TEXT("Classes/SM_State.h"));
@@ -346,7 +351,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/StateMachine")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0xF9F5745F;
+			Guid.A = 0xC1291AF0;
 			Guid.B = 0x5BB6B00A;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;

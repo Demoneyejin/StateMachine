@@ -13,10 +13,10 @@ USM_State::USM_State()
 
 USM_State* USM_Branch::TryBranch(const UObject* RefObject, const TArray<USM_InputAtom*>& DataSource, int32 DataIndex, int32 &OutDataIndex)
 {
-	OutDataIndex = DataIndex;
-	if (!AcceptableInputs.Num() || (DataSource.IsValidIndex(DataIndex) && AcceptableInputs.Contains(DataSource[DataIndex])))
+	OutDataIndex = DataIndex +1;
+	if ( (DataSource.IsValidIndex(DataIndex) && AcceptableInputs.Contains(DataSource[DataIndex])))
 	{
-		++OutDataIndex;
+		
 		return bReverseInputTest ? nullptr : DestinationState;
 	}
 	return bReverseInputTest ? DestinationState : nullptr;
