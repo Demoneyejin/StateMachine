@@ -16,7 +16,6 @@ USM_State* USM_Branch::TryBranch(const UObject* RefObject, const TArray<USM_Inpu
 	OutDataIndex = DataIndex +1;
 	if ( (DataSource.IsValidIndex(DataIndex) && AcceptableInputs.Contains(DataSource[DataIndex])))
 	{
-		
 		return bReverseInputTest ? nullptr : DestinationState;
 	}
 	return bReverseInputTest ? DestinationState : nullptr;

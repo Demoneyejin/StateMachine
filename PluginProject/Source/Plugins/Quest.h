@@ -56,8 +56,8 @@ struct FQuestInProgress
 	GENERATED_BODY()
 
 		// Quest Data Asset.
-		UPROPERTY(EditAnywhere)
-		const UQuest* Quest;
+	UPROPERTY(EditAnywhere)
+	const UQuest* Quest;
 
 		//Current progress in the quest
 	UPROPERTY(EditAnywhere)
@@ -95,6 +95,14 @@ public:
 		}
 		return false;
 	}
+
+	static FQuestInProgress NewQuestInProgress(const UQuest* _Quest)
+	{
+		FQuestInProgress NewQIP;
+		NewQIP.Quest = _Quest;
+		NewQIP.QuestProgress = EQuestCompletion::EQC_Started;
+		return NewQIP;
+	}
 };
 
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
@@ -118,6 +126,11 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Quests")
 	void UpdateQuests(USM_InputAtom* QuestActivity);
 
+	//Add a new quest in progress entry or begin the quest provided if it's already on the list and hasn't been started yet.
+
+	UFUNCTION(BlueprintCallable, Category = "Quests")
+	bool BeginQuest(const UQuest* Quest);
+
 protected:
 
 	//The master list of all quest-related things we've done.
@@ -127,5 +140,35 @@ protected:
 	//The list of quests in our current game or area.
 	UPROPERTY(EditAnywhere)
 	TArray<FQuestInProgress> QuestList;
+
+};
+
+UCLASS()
+class PLUGINS_API UQuestWithResult : public UQuest
+{
+	GENERATED_BODY()
+
+public:
+
+	virtual void OnSuccess(class UQuestStatus* QuestStatus) const override;
+	virtual void OnFailed(class UQuestStatus* QuestStatus) const override;
+
+protected:
+
+	// The quest on this list will go from not started to started if the current quest succeeds. 
+	UPROPERTY(EditAnywhere)
+	TArray<UQuest*> SuccessQuests;
+
+	//Input Atoms to add if the quest succeeds.
+	UPROPERTY(EditAnywhere)
+	TArray<USM_InputAtom*> SuccessInputs;
+
+	//The quest in this list will go from notStarted to Started if the current quest fails
+	UPROPERTY(EditAnywhere)
+	TArray<UQuest*> FailureQuests;
+
+	//Input Atoms to add if the quest fails
+	UPROPERTY(EditAnywhere)
+	TArray<USM_InputAtom*> FailedInputs;
 
 };

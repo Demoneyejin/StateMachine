@@ -16,14 +16,14 @@ struct FStateMachineResult;
 #endif
 #define STATEMACHINE_SM_State_generated_h
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_31_GENERATED_BODY \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_31_GENERATED_BODY \
 	friend STATEMACHINE_API class UScriptStruct* Z_Construct_UScriptStruct_FStateMachineResult(); \
 	static class UScriptStruct* StaticStruct();
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_RPC_WRAPPERS
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_RPC_WRAPPERS_NO_PURE_DECLS
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_INCLASS_NO_PURE_DECLS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_RPC_WRAPPERS
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_RPC_WRAPPERS_NO_PURE_DECLS
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesUSM_InputAtom(); \
 	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_InputAtom(); \
@@ -34,7 +34,7 @@ struct FStateMachineResult;
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_INCLASS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_INCLASS \
 	private: \
 	static void StaticRegisterNativesUSM_InputAtom(); \
 	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_InputAtom(); \
@@ -45,7 +45,7 @@ struct FStateMachineResult;
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_STANDARD_CONSTRUCTORS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USM_InputAtom(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USM_InputAtom) \
@@ -58,7 +58,7 @@ private: \
 public:
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_ENHANCED_CONSTRUCTORS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USM_InputAtom(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -71,30 +71,30 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USM_InputAtom); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USM_InputAtom)
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_43_PROLOG
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_GENERATED_BODY_LEGACY \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_43_PROLOG
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_RPC_WRAPPERS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_INCLASS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_STANDARD_CONSTRUCTORS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_RPC_WRAPPERS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_INCLASS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_GENERATED_BODY \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_RPC_WRAPPERS_NO_PURE_DECLS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_INCLASS_NO_PURE_DECLS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_ENHANCED_CONSTRUCTORS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_RPC_WRAPPERS_NO_PURE_DECLS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_INCLASS_NO_PURE_DECLS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_46_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_RPC_WRAPPERS
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_RPC_WRAPPERS_NO_PURE_DECLS
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_INCLASS_NO_PURE_DECLS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_RPC_WRAPPERS
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_RPC_WRAPPERS_NO_PURE_DECLS
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesUSM_Branch(); \
 	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_Branch(); \
@@ -105,7 +105,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_INCLASS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_INCLASS \
 	private: \
 	static void StaticRegisterNativesUSM_Branch(); \
 	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_Branch(); \
@@ -116,7 +116,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_STANDARD_CONSTRUCTORS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USM_Branch(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USM_Branch) \
@@ -129,7 +129,7 @@ private: \
 public:
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_ENHANCED_CONSTRUCTORS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USM_Branch(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -142,28 +142,28 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USM_Branch); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USM_Branch)
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_54_PROLOG
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_GENERATED_BODY_LEGACY \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_54_PROLOG
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_RPC_WRAPPERS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_INCLASS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_STANDARD_CONSTRUCTORS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_RPC_WRAPPERS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_INCLASS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_GENERATED_BODY \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_RPC_WRAPPERS_NO_PURE_DECLS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_INCLASS_NO_PURE_DECLS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_ENHANCED_CONSTRUCTORS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_RPC_WRAPPERS_NO_PURE_DECLS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_INCLASS_NO_PURE_DECLS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_57_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_RPC_WRAPPERS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execRunState) \
 	{ \
@@ -178,7 +178,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_RPC_WRAPPERS_NO_PURE_DECLS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execRunState) \
 	{ \
@@ -193,7 +193,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_INCLASS_NO_PURE_DECLS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesUSM_State(); \
 	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_State(); \
@@ -204,7 +204,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_INCLASS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_INCLASS \
 	private: \
 	static void StaticRegisterNativesUSM_State(); \
 	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_State(); \
@@ -215,7 +215,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_STANDARD_CONSTRUCTORS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USM_State(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USM_State) \
@@ -228,7 +228,7 @@ private: \
 public:
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_ENHANCED_CONSTRUCTORS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API USM_State(USM_State&&); \
@@ -239,29 +239,29 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USM_State); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(USM_State)
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_82_PROLOG
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_GENERATED_BODY_LEGACY \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_82_PROLOG
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_RPC_WRAPPERS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_INCLASS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_STANDARD_CONSTRUCTORS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_RPC_WRAPPERS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_INCLASS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_GENERATED_BODY \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_RPC_WRAPPERS_NO_PURE_DECLS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_INCLASS_NO_PURE_DECLS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_ENHANCED_CONSTRUCTORS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_RPC_WRAPPERS_NO_PURE_DECLS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_INCLASS_NO_PURE_DECLS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h_85_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h
+#define CURRENT_FILE_ID PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_SM_State_h
 
 
 #define FOREACH_ENUM_ESTATEMACHINECOMPLETIONTYPE(op) \

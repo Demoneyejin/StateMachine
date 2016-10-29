@@ -42,7 +42,44 @@ void UQuestStatus::UpdateQuests(USM_InputAtom * QuestActivity)
 
 	//process completed quests after updating all quests.
 	// this way, a completed quest can't inject out of order input atoms into our other quests.
-	for(int32 i =)
+	for (int32 i = RecentlyCompletedQuests.Num() - 1; i >= 0; --i)
+	{
+		FQuestInProgress& QIP = QuestList[RecentlyCompletedQuests[i]];
+		if (QIP.QuestProgress == EQuestCompletion::EQC_Succeeded)
+		{
+			QIP.Quest->OnSuccess(this);
+		}
+		else
+		{
+			QIP.Quest->OnFailed(this);
+		}
+		RecentlyCompletedQuests.RemoveAtSwap(i);
+	}
+}
+
+bool UQuestStatus::BeginQuest(const UQuest * Quest)
+{
+	for (FQuestInProgress& QIP : QuestList)
+	{
+		if (QIP.Quest == Quest)
+		{
+			if (QIP.QuestProgress == EQuestCompletion::EQC_NotStarted)
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Changing Quest \" %s \" to started"), *QIP.Quest->QuestName.ToString())
+				QIP.QuestProgress = EQuestCompletion::EQC_Started;
+				return true;
+			}
+			else
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Quest \" %s \" is already on the list."), *QIP.Quest->QuestName.ToString())
+				return false;
+			}
+		}
+	}
+	//If we did not find any quests then it wasn't even in the list at all, so we're gonna add it and start it. 
+	UE_LOG(LogTemp, Warning, TEXT("Adding quest \" %s \" to the list and starting it."), *Quest->QuestName.ToString())
+	QuestList.Add(FQuestInProgress::NewQuestInProgress(Quest));
+	return true;
 }
 
 
@@ -53,4 +90,34 @@ void UQuest::OnSuccess(class UQuestStatus* QuestStatus) const
 void UQuest::OnFailed(class UQuestStatus* QuestStatus) const
 {
 	UE_LOG(LogTemp, Warning, TEXT("Quest \"%s\" has failed"), *QuestName.ToString())
+}
+
+void UQuestWithResult::OnSuccess(class UQuestStatus* QuestStatus) const
+{
+	Super::OnSuccess(QuestStatus);
+
+	for (UQuest* SuccessQuest : SuccessQuests)
+	{
+		QuestStatus->BeginQuest(SuccessQuest);
+	}
+
+	for (int32 i = 0; i < SuccessInputs.Num(); ++i)
+	{
+		QuestStatus->UpdateQuests(SuccessInputs[i]);
+	}
+}
+
+void UQuestWithResult::OnFailed(UQuestStatus * QuestStatus) const
+{
+	Super::OnFailed(QuestStatus);
+
+	for (UQuest* FailedQuest : FailureQuests)
+	{
+		QuestStatus->BeginQuest(FailedQuest);
+	}
+
+	for (int32 i = 0; i < FailedInputs.Num(); ++i)
+	{
+		QuestStatus->UpdateQuests(FailedInputs[i]);
+	}
 }

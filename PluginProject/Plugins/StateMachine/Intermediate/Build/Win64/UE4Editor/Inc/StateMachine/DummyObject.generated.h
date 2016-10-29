@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define STATEMACHINE_DummyObject_generated_h
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_RPC_WRAPPERS
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_INCLASS_NO_PURE_DECLS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_RPC_WRAPPERS
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesUDummyObject(); \
 	friend STATEMACHINE_API class UClass* Z_Construct_UClass_UDummyObject(); \
@@ -26,7 +26,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_INCLASS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_INCLASS \
 	private: \
 	static void StaticRegisterNativesUDummyObject(); \
 	friend STATEMACHINE_API class UClass* Z_Construct_UClass_UDummyObject(); \
@@ -37,7 +37,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_STANDARD_CONSTRUCTORS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UDummyObject(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UDummyObject) \
@@ -50,7 +50,7 @@ private: \
 public:
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_ENHANCED_CONSTRUCTORS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UDummyObject(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -63,29 +63,29 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UDummyObject); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UDummyObject)
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_12_PROLOG
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_GENERATED_BODY_LEGACY \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_12_PROLOG
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_RPC_WRAPPERS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_INCLASS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_STANDARD_CONSTRUCTORS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_RPC_WRAPPERS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_INCLASS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_GENERATED_BODY \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_INCLASS_NO_PURE_DECLS \
-	StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_ENHANCED_CONSTRUCTORS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_INCLASS_NO_PURE_DECLS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID StateMachine_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h
+#define CURRENT_FILE_ID PluginProject_Plugins_StateMachine_Source_StateMachine_Classes_DummyObject_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

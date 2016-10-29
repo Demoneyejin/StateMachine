@@ -30,14 +30,14 @@ struct STATEMACHINE_API FStateMachineResult
 {
 	GENERATED_USTRUCT_BODY()
 
-		UPROPERTY()
-		EStateMachineCompletionType CompletionType;
+	UPROPERTY()
+	EStateMachineCompletionType CompletionType;
 
 	UPROPERTY()
-		USM_State* FinalState;
+	USM_State* FinalState;
 
 	UPROPERTY()
-		int32 DataIndex;
+	int32 DataIndex;
 };
 
 UCLASS()
@@ -48,7 +48,7 @@ class STATEMACHINE_API USM_InputAtom : public UDataAsset
 public:
 	// Display value for this input atom, mainly for debugging purposes.
 	UPROPERTY(EditAnywhere)
-		FName Description;
+	FName Description;
 };
 
 UCLASS(EditInlineNew)
@@ -65,15 +65,15 @@ public:
 protected:
 	// State where we will go next if this branch is taken. If null, this branch will be ignored.
 	UPROPERTY(EditAnywhere)
-		USM_State* DestinationState;
+	USM_State* DestinationState;
 
 	// If true, the meaning of AcceptableInputs is reversed.
 	UPROPERTY(EditAnywhere)
-		uint32 bReverseInputTest : 1;
+	uint32 bReverseInputTest : 1;
 
 	// Acceptable inputs. The current input atom must be on this list.
 	UPROPERTY(EditAnywhere)
-		TArray<USM_InputAtom*> AcceptableInputs;
+	TArray<USM_InputAtom*> AcceptableInputs;
 };
 
 /**
@@ -94,7 +94,7 @@ public:
 	   Will decrement RemainingSteps and automatically fail after it hits 0.
 	   */
 	UFUNCTION(BlueprintCallable, Category = "State Machine")
-		virtual FStateMachineResult RunState(const UObject* RefObject, const TArray<USM_InputAtom*>& DataSource, int32 DataIndex = 0,	int32 RemainingSteps= -1);
+	virtual FStateMachineResult RunState(const UObject* RefObject, const TArray<USM_InputAtom*>& DataSource, int32 DataIndex = 0,	int32 RemainingSteps= -1);
 
 protected:
 
