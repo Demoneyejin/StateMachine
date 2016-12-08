@@ -11,6 +11,14 @@ USM_State::USM_State()
 	bLoopByDefault = true;
 }
 
+USM_State* USM_BranchBase::TryBranch(const UObject* RefObject, const TArray<USM_InputAtom*>& DataSource,
+	int32 DataIndex, int32 &OutDataIndex)
+{
+	OutDataIndex = DataIndex;
+	return nullptr;
+}
+
+
 USM_State* USM_Branch::TryBranch(const UObject* RefObject, const TArray<USM_InputAtom*>& DataSource, int32 DataIndex, int32 &OutDataIndex)
 {
 	OutDataIndex = DataIndex +1;

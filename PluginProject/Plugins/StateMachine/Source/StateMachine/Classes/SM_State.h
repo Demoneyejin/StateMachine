@@ -52,7 +52,7 @@ public:
 };
 
 UCLASS(EditInlineNew)
-class STATEMACHINE_API USM_Branch : public UDataAsset
+class STATEMACHINE_API USM_BranchBase : public UDataAsset
 {
 	GENERATED_BODY()
 
@@ -66,6 +66,22 @@ protected:
 	// State where we will go next if this branch is taken. If null, this branch will be ignored.
 	UPROPERTY(EditAnywhere)
 	USM_State* DestinationState;
+
+};
+
+
+UCLASS(EditInlineNew)
+class STATEMACHINE_API USM_Branch : public USM_BranchBase
+{
+	GENERATED_BODY()
+
+public:
+	/** Returns DestinationState on success, NULL on failure. For subclasses,
+	OutDataIndex might be something other than 1, if a branch is made to consume multiple inputs. */
+	virtual USM_State* TryBranch(const UObject* RefObject, const TArray<USM_InputAtom*>& DataSource,
+		int32 DataIndex, int32 &OutDataIndex);
+
+protected:
 
 	// If true, the meaning of AcceptableInputs is reversed.
 	UPROPERTY(EditAnywhere)
@@ -116,10 +132,10 @@ protected:
 
 	// Branches to other states. These are in priority order, so the first successful branch will be taken. 
 	UPROPERTY(EditAnywhere, Instanced)
-	TArray<USM_Branch*> InstancedBranches;	
+	TArray<USM_BranchBase*> InstancedBranches;	
 
 	//Branches to other states. these are in priority order, so the first successful branch will be taken. these run after instacned Branches.
 	UPROPERTY(EditAnywhere)
-	TArray<USM_Branch*> SharedBranches;
+	TArray<USM_BranchBase*> SharedBranches;
 	
 };

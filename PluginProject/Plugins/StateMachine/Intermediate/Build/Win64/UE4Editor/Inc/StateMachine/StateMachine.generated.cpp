@@ -49,15 +49,19 @@ static struct FScriptStruct_StateMachine_StaticRegisterNativesFStateMachineResul
 	{
 	}
 	IMPLEMENT_CLASS(USM_InputAtom, 99113963);
+	void USM_BranchBase::StaticRegisterNativesUSM_BranchBase()
+	{
+	}
+	IMPLEMENT_CLASS(USM_BranchBase, 73877193);
 	void USM_Branch::StaticRegisterNativesUSM_Branch()
 	{
 	}
-	IMPLEMENT_CLASS(USM_Branch, 3867919134);
+	IMPLEMENT_CLASS(USM_Branch, 702118653);
 	void USM_State::StaticRegisterNativesUSM_State()
 	{
 		FNativeFunctionRegistrar::RegisterFunction(USM_State::StaticClass(), "RunState",(Native)&USM_State::execRunState);
 	}
-	IMPLEMENT_CLASS(USM_State, 3284690260);
+	IMPLEMENT_CLASS(USM_State, 3828166772);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	COREUOBJECT_API class UClass* Z_Construct_UClass_UObject();
@@ -70,6 +74,8 @@ static struct FScriptStruct_StateMachine_StaticRegisterNativesFStateMachineResul
 	STATEMACHINE_API class UScriptStruct* Z_Construct_UScriptStruct_FStateMachineResult();
 	STATEMACHINE_API class UClass* Z_Construct_UClass_USM_InputAtom_NoRegister();
 	STATEMACHINE_API class UClass* Z_Construct_UClass_USM_InputAtom();
+	STATEMACHINE_API class UClass* Z_Construct_UClass_USM_BranchBase_NoRegister();
+	STATEMACHINE_API class UClass* Z_Construct_UClass_USM_BranchBase();
 	STATEMACHINE_API class UClass* Z_Construct_UClass_USM_Branch_NoRegister();
 	STATEMACHINE_API class UClass* Z_Construct_UClass_USM_Branch();
 	STATEMACHINE_API class UFunction* Z_Construct_UFunction_USM_State_RunState();
@@ -196,6 +202,43 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_USM_InputAtom(Z_Construct_UClass_USM_InputAtom, &USM_InputAtom::StaticClass, TEXT("USM_InputAtom"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(USM_InputAtom);
+	UClass* Z_Construct_UClass_USM_BranchBase_NoRegister()
+	{
+		return USM_BranchBase::StaticClass();
+	}
+	UClass* Z_Construct_UClass_USM_BranchBase()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_UDataAsset();
+			Z_Construct_UPackage__Script_StateMachine();
+			OuterClass = USM_BranchBase::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20101080;
+
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_DestinationState = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("DestinationState"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(DestinationState, USM_BranchBase), 0x0020080000000001, Z_Construct_UClass_USM_State_NoRegister());
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("SM_State.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("Classes/SM_State.h"));
+				MetaData->SetValue(NewProp_DestinationState, TEXT("Category"), TEXT("SM_BranchBase"));
+				MetaData->SetValue(NewProp_DestinationState, TEXT("ModuleRelativePath"), TEXT("Classes/SM_State.h"));
+				MetaData->SetValue(NewProp_DestinationState, TEXT("ToolTip"), TEXT("State where we will go next if this branch is taken. If null, this branch will be ignored."));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_USM_BranchBase(Z_Construct_UClass_USM_BranchBase, &USM_BranchBase::StaticClass, TEXT("USM_BranchBase"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(USM_BranchBase);
 	UClass* Z_Construct_UClass_USM_Branch_NoRegister()
 	{
 		return USM_Branch::StaticClass();
@@ -205,7 +248,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 		static UClass* OuterClass = NULL;
 		if (!OuterClass)
 		{
-			Z_Construct_UClass_UDataAsset();
+			Z_Construct_UClass_USM_BranchBase();
 			Z_Construct_UPackage__Script_StateMachine();
 			OuterClass = USM_Branch::StaticClass();
 			if (!(OuterClass->ClassFlags & CLASS_Constructed))
@@ -219,7 +262,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_AcceptableInputs_Inner = new(EC_InternalUseOnlyConstructor, NewProp_AcceptableInputs, TEXT("AcceptableInputs"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(FObjectInitializer(), EC_CppProperty, 0, 0x0000000000000000, Z_Construct_UClass_USM_InputAtom_NoRegister());
 				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bReverseInputTest, USM_Branch, uint8);
 				UProperty* NewProp_bReverseInputTest = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bReverseInputTest"), RF_Public|RF_Transient|RF_MarkAsNative) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bReverseInputTest, USM_Branch), 0x0020080000000001, CPP_BOOL_PROPERTY_BITMASK(bReverseInputTest, USM_Branch), sizeof(uint8), false);
-				UProperty* NewProp_DestinationState = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("DestinationState"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(DestinationState, USM_Branch), 0x0020080000000001, Z_Construct_UClass_USM_State_NoRegister());
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				OuterClass->StaticLink();
 #if WITH_METADATA
@@ -232,9 +274,6 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				MetaData->SetValue(NewProp_bReverseInputTest, TEXT("Category"), TEXT("SM_Branch"));
 				MetaData->SetValue(NewProp_bReverseInputTest, TEXT("ModuleRelativePath"), TEXT("Classes/SM_State.h"));
 				MetaData->SetValue(NewProp_bReverseInputTest, TEXT("ToolTip"), TEXT("If true, the meaning of AcceptableInputs is reversed."));
-				MetaData->SetValue(NewProp_DestinationState, TEXT("Category"), TEXT("SM_Branch"));
-				MetaData->SetValue(NewProp_DestinationState, TEXT("ModuleRelativePath"), TEXT("Classes/SM_State.h"));
-				MetaData->SetValue(NewProp_DestinationState, TEXT("ToolTip"), TEXT("State where we will go next if this branch is taken. If null, this branch will be ignored."));
 #endif
 			}
 		}
@@ -300,9 +339,9 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_SharedBranches = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("SharedBranches"), RF_Public|RF_Transient|RF_MarkAsNative) UArrayProperty(CPP_PROPERTY_BASE(SharedBranches, USM_State), 0x0020080000000001);
-				UProperty* NewProp_SharedBranches_Inner = new(EC_InternalUseOnlyConstructor, NewProp_SharedBranches, TEXT("SharedBranches"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(FObjectInitializer(), EC_CppProperty, 0, 0x0000000000000000, Z_Construct_UClass_USM_Branch_NoRegister());
+				UProperty* NewProp_SharedBranches_Inner = new(EC_InternalUseOnlyConstructor, NewProp_SharedBranches, TEXT("SharedBranches"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(FObjectInitializer(), EC_CppProperty, 0, 0x0000000000000000, Z_Construct_UClass_USM_BranchBase_NoRegister());
 				UProperty* NewProp_InstancedBranches = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("InstancedBranches"), RF_Public|RF_Transient|RF_MarkAsNative) UArrayProperty(CPP_PROPERTY_BASE(InstancedBranches, USM_State), 0x0020088000000009);
-				UProperty* NewProp_InstancedBranches_Inner = new(EC_InternalUseOnlyConstructor, NewProp_InstancedBranches, TEXT("InstancedBranches"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(FObjectInitializer(), EC_CppProperty, 0, 0x0002000000080008, Z_Construct_UClass_USM_Branch_NoRegister());
+				UProperty* NewProp_InstancedBranches_Inner = new(EC_InternalUseOnlyConstructor, NewProp_InstancedBranches, TEXT("InstancedBranches"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(FObjectInitializer(), EC_CppProperty, 0, 0x0002000000080008, Z_Construct_UClass_USM_BranchBase_NoRegister());
 				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bLoopByDefault, USM_State, uint8);
 				UProperty* NewProp_bLoopByDefault = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bLoopByDefault"), RF_Public|RF_Transient|RF_MarkAsNative) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bLoopByDefault, USM_State), 0x0020080000000001, CPP_BOOL_PROPERTY_BITMASK(bLoopByDefault, USM_State), sizeof(uint8), false);
 				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bTerminateImmediately, USM_State, uint8);
@@ -351,8 +390,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/StateMachine")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0xC1291AF0;
-			Guid.B = 0x5BB6B00A;
+			Guid.A = 0x8192E83D;
+			Guid.B = 0xE03592B4;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

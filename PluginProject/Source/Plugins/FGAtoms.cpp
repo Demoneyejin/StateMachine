@@ -1,7 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#pragma once
+#include "Plugins.h"
+#include "FGAtoms.h"
 
-#include "Engine.h"
-#include "FGState.h"
+
+
 
