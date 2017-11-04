@@ -103,10 +103,7 @@ void UQuestWithResult::OnSucceed(UQuestStatus * QuestStatus) const
 
 	for (int32 i = 0; i < SuccessQuests.Num(); ++i)
 	{
-		if (SuccessInputs.Num() > 0)
-		{
-			QuestStatus->UpdateQuests(SuccessInputs[i]);
-		}
+		QuestStatus->UpdateQuests(SuccessInputs[i]);
 	}
 
 }
@@ -122,9 +119,6 @@ void UQuestWithResult::OnFailed(UQuestStatus * QuestStatus) const
 
 	for (int32 i = 0; i < FailureQuests.Num(); ++i)
 	{
-		if (FailureInputs.Num() > 0)
-		{
-			QuestStatus->UpdateQuests(FailureInputs[i]);
-		}
+		QuestStatus->UpdateQuests(FailureInputs[i]);
 	}
 }
