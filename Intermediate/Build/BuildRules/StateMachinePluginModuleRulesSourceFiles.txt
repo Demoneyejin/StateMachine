@@ -1,0 +1,4 @@
+C:\Users\wolfw\OneDrive\Documents\StateMachine\Source\StateMachinePlugin\StateMachinePlugin.Build.cs
+C:\Users\wolfw\OneDrive\Documents\StateMachine\Plugins\StateMachine\Source\StateMachine\StateMachine.Build.cs
+C:\Users\wolfw\OneDrive\Documents\StateMachine\Source\StateMachinePlugin.Target.cs
+C:\Users\wolfw\OneDrive\Documents\StateMachine\Source\StateMachinePluginEditor.Target.cs
