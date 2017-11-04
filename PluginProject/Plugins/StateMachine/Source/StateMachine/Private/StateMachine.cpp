@@ -1,13 +1,13 @@
-// Copyright 1998-2016 Epic Games, Inc. All Rights Reserved.
+// Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
 
-#include "StateMachinePrivatePCH.h"
+#include "StateMachine.h"
 
 #define LOCTEXT_NAMESPACE "FStateMachineModule"
 
 void FStateMachineModule::StartupModule()
 {
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
-	UE_LOG(LogTemp, Warning, TEXT("State Machine Module loaded."))
+	UE_LOG(LogTemp, Warning, TEXT("State Machine module loaded."))
 }
 
 void FStateMachineModule::ShutdownModule()

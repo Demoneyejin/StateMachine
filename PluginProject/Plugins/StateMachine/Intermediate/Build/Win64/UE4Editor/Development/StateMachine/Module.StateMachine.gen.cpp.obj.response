@@ -14,7 +14,6 @@
 /Ob2
 /errorReport:prompt
 /EHsc
-/Z7
 /MD
 /bigobj
 /fp:fast
@@ -361,9 +360,9 @@
 /FI"C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
 /Yu"C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
 /Fp"C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.pch"
-"C:\Users\wolfw\OneDrive\Documents\StateMachine\PluginProject\Plugins\StateMachine\Intermediate\Build\Win64\UE4Editor\Development\StateMachine\Module.StateMachine.cpp"
+"C:\Users\wolfw\OneDrive\Documents\StateMachine\PluginProject\Plugins\StateMachine\Intermediate\Build\Win64\UE4Editor\Development\StateMachine\Module.StateMachine.gen.cpp"
 /FI"C:\Users\wolfw\OneDrive\Documents\StateMachine\PluginProject\Plugins\StateMachine\Intermediate\Build\Win64\UE4Editor\Development\StateMachine\Definitions.StateMachine.h"
-/Fo"C:\Users\wolfw\OneDrive\Documents\StateMachine\PluginProject\Plugins\StateMachine\Intermediate\Build\Win64\UE4Editor\Development\StateMachine\Module.StateMachine.cpp.obj"
+/Fo"C:\Users\wolfw\OneDrive\Documents\StateMachine\PluginProject\Plugins\StateMachine\Intermediate\Build\Win64\UE4Editor\Development\StateMachine\Module.StateMachine.gen.cpp.obj"
 /TP
 /GR-
 /W4

@@ -1,8 +1,7 @@
 {
-	"Changelist" : 3172292,
-	"BuildId" : "",
-	"Modules" : 
+	"BuildId": "3709383",
+	"Modules": 
 	{
-		"StateMachine" : "UE4Editor-StateMachine.dll"
+		"StateMachine": "UE4Editor-StateMachine.dll"
 	}
 }
