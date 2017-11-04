@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\StateMachinePlugin.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{44DCB834-60AA-4029-9975-3DCA2F2C8856}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\StateMachinePlugin.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\StateMachinePluginEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{4800CE46-B0D7-4583-B8A2-C3BDD3A5E011}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Plugins">
+			<UniqueIdentifier>{0CD4E386-BC13-4471-8044-6012F1D17859}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Plugins\StateMachine">
+			<UniqueIdentifier>{747A615D-6E19-47CB-95FF-C90C75884E26}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Plugins\StateMachine\Source">
+			<UniqueIdentifier>{BB33BF09-8B1D-4A0F-8EC5-689D8082821F}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Plugins\StateMachine\Source\StateMachine">
+			<UniqueIdentifier>{75710AFA-DD5A-4148-B1AC-7939259D974B}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Plugins\StateMachine\Source\StateMachine\StateMachine.Build.cs">
+			<Filter>Plugins\StateMachine\Source\StateMachine</Filter>
+		</None >
+		<Filter Include="Plugins\StateMachine\Source\StateMachine\Private">
+			<UniqueIdentifier>{CECD5388-9E2D-40E1-AA44-DE2AA0948120}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Plugins\StateMachine\Source\StateMachine\Private\SM_State.cpp">
+			<Filter>Plugins\StateMachine\Source\StateMachine\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Plugins\StateMachine\Source\StateMachine\Private\StateMachine.cpp">
+			<Filter>Plugins\StateMachine\Source\StateMachine\Private</Filter>
+		</ClCompile >
+		<Filter Include="Plugins\StateMachine\Source\StateMachine\Public">
+			<UniqueIdentifier>{7F81BA3F-6E73-4A99-AC4C-1CDFDFEBCC9F}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Plugins\StateMachine\Source\StateMachine\Public\SM_State.h">
+			<Filter>Plugins\StateMachine\Source\StateMachine\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Plugins\StateMachine\Source\StateMachine\Public\StateMachine.h">
+			<Filter>Plugins\StateMachine\Source\StateMachine\Public</Filter>
+		</ClInclude >
+		<None Include="..\..\Plugins\StateMachine\StateMachine.uplugin">
+			<Filter>Plugins\StateMachine</Filter>
+		</None >
+		<Filter Include="Plugins\StateMachine\Resources">
+			<UniqueIdentifier>{35EEB595-F289-478D-BE46-A53080041A82}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Plugins\StateMachine\Resources\Icon128.png">
+			<Filter>Plugins\StateMachine\Resources</Filter>
+		</None >
+		<Filter Include="Source\StateMachinePlugin">
+			<UniqueIdentifier>{A45775AC-9F25-4363-8A8D-BE97BCC5064A}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Source\StateMachinePlugin\Controller_Atoms.cpp">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\StateMachinePlugin\Controller_Atoms.h">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\StateMachinePlugin\C_InputBranch.cpp">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\StateMachinePlugin\C_InputBranch.h">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\StateMachinePlugin\Quest.cpp">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\StateMachinePlugin\Quest.h">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</ClInclude >
+		<None Include="..\..\Source\StateMachinePlugin\StateMachinePlugin.Build.cs">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\StateMachinePlugin\StateMachinePlugin.cpp">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\StateMachinePlugin\StateMachinePlugin.h">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\StateMachinePlugin\StateMachinePluginGameModeBase.cpp">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\StateMachinePlugin\StateMachinePluginGameModeBase.h">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>
