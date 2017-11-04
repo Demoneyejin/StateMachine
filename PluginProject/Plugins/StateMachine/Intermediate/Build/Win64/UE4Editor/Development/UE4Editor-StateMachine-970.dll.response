@@ -60,7 +60,7 @@
 "C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Slate.lib"
 "C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-SlateCore.lib"
 "C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Core.lib"
-/OUT:"C:\Users\wolfw\OneDrive\Documents\StateMachine\PluginProject\Plugins\StateMachine\Binaries\Win64\UE4Editor-StateMachine-9651.dll"
-/IMPLIB:"C:\Users\wolfw\OneDrive\Documents\StateMachine\PluginProject\Plugins\StateMachine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-StateMachine-9651.suppressed.lib"
-/PDB:"C:\Users\wolfw\OneDrive\Documents\StateMachine\PluginProject\Plugins\StateMachine\Binaries\Win64\UE4Editor-StateMachine-9651.pdb"
+/OUT:"C:\Users\wolfw\OneDrive\Documents\StateMachine\PluginProject\Plugins\StateMachine\Binaries\Win64\UE4Editor-StateMachine-970.dll"
+/IMPLIB:"C:\Users\wolfw\OneDrive\Documents\StateMachine\PluginProject\Plugins\StateMachine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-StateMachine-970.suppressed.lib"
+/PDB:"C:\Users\wolfw\OneDrive\Documents\StateMachine\PluginProject\Plugins\StateMachine\Binaries\Win64\UE4Editor-StateMachine-970.pdb"
 /ignore:4078

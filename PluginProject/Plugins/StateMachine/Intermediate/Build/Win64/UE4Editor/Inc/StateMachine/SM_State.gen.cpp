@@ -20,6 +20,8 @@ void EmptyLinkFunctionForGeneratedCodeSM_State() {}
 	STATEMACHINE_API UClass* Z_Construct_UClass_USM_InputAtom_NoRegister();
 	STATEMACHINE_API UClass* Z_Construct_UClass_USM_InputAtom();
 	ENGINE_API UClass* Z_Construct_UClass_UDataAsset();
+	STATEMACHINE_API UClass* Z_Construct_UClass_USM_BranchBase_NoRegister();
+	STATEMACHINE_API UClass* Z_Construct_UClass_USM_BranchBase();
 	STATEMACHINE_API UClass* Z_Construct_UClass_USM_Branch_NoRegister();
 	STATEMACHINE_API UClass* Z_Construct_UClass_USM_Branch();
 	STATEMACHINE_API UClass* Z_Construct_UClass_USM_State();
@@ -211,6 +213,60 @@ static struct FScriptStruct_StateMachine_StaticRegisterNativesFStateMachineResul
 	IMPLEMENT_CLASS(USM_InputAtom, 1393670884);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_USM_InputAtom(Z_Construct_UClass_USM_InputAtom, &USM_InputAtom::StaticClass, TEXT("/Script/StateMachine"), TEXT("USM_InputAtom"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(USM_InputAtom);
+	void USM_BranchBase::StaticRegisterNativesUSM_BranchBase()
+	{
+	}
+	UClass* Z_Construct_UClass_USM_BranchBase_NoRegister()
+	{
+		return USM_BranchBase::StaticClass();
+	}
+	UClass* Z_Construct_UClass_USM_BranchBase()
+	{
+		static UClass* OuterClass = nullptr;
+		if (!OuterClass)
+		{
+			static UObject* (*const DependentSingletons[])() = {
+				(UObject* (*)())Z_Construct_UClass_UDataAsset,
+				(UObject* (*)())Z_Construct_UPackage__Script_StateMachine,
+			};
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+				{ "IncludePath", "SM_State.h" },
+				{ "ModuleRelativePath", "Public/SM_State.h" },
+			};
+#endif
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DestintationState_MetaData[] = {
+				{ "Category", "SM_BranchBase" },
+				{ "ModuleRelativePath", "Public/SM_State.h" },
+				{ "ToolTip", "State where we will go next if this branch is taken.  if null, the branch will be ignored." },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_DestintationState = { UE4CodeGen_Private::EPropertyClass::Object, "DestintationState", RF_Public|RF_Transient|RF_MarkAsNative, 0x0020080000000001, 1, nullptr, STRUCT_OFFSET(USM_BranchBase, DestintationState), Z_Construct_UClass_USM_State_NoRegister, METADATA_PARAMS(NewProp_DestintationState_MetaData, ARRAY_COUNT(NewProp_DestintationState_MetaData)) };
+			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_DestintationState,
+			};
+			static const FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
+				TCppClassTypeTraits<USM_BranchBase>::IsAbstract,
+			};
+			static const UE4CodeGen_Private::FClassParams ClassParams = {
+				&USM_BranchBase::StaticClass,
+				DependentSingletons, ARRAY_COUNT(DependentSingletons),
+				0x00101080u,
+				nullptr, 0,
+				PropPointers, ARRAY_COUNT(PropPointers),
+				nullptr,
+				&StaticCppClassTypeInfo,
+				nullptr, 0,
+				METADATA_PARAMS(Class_MetaDataParams, ARRAY_COUNT(Class_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUClass(OuterClass, ClassParams);
+		}
+		return OuterClass;
+	}
+	IMPLEMENT_CLASS(USM_BranchBase, 2269030940);
+	static FCompiledInDefer Z_CompiledInDefer_UClass_USM_BranchBase(Z_Construct_UClass_USM_BranchBase, &USM_BranchBase::StaticClass, TEXT("/Script/StateMachine"), TEXT("USM_BranchBase"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(USM_BranchBase);
 	void USM_Branch::StaticRegisterNativesUSM_Branch()
 	{
 	}
@@ -224,7 +280,7 @@ static struct FScriptStruct_StateMachine_StaticRegisterNativesFStateMachineResul
 		if (!OuterClass)
 		{
 			static UObject* (*const DependentSingletons[])() = {
-				(UObject* (*)())Z_Construct_UClass_UDataAsset,
+				(UObject* (*)())Z_Construct_UClass_USM_BranchBase,
 				(UObject* (*)())Z_Construct_UPackage__Script_StateMachine,
 			};
 #if WITH_METADATA
@@ -251,19 +307,10 @@ static struct FScriptStruct_StateMachine_StaticRegisterNativesFStateMachineResul
 #endif
 			auto NewProp_bReverseInputTest_SetBit = [](void* Obj){ ((USM_Branch*)Obj)->bReverseInputTest = 1; };
 			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bReverseInputTest = { UE4CodeGen_Private::EPropertyClass::Bool, "bReverseInputTest", RF_Public|RF_Transient|RF_MarkAsNative, 0x0020080000000001, 1, nullptr, sizeof(uint8), UE4CodeGen_Private::ENativeBool::NotNative, sizeof(USM_Branch), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_bReverseInputTest_SetBit)>::SetBit, METADATA_PARAMS(NewProp_bReverseInputTest_MetaData, ARRAY_COUNT(NewProp_bReverseInputTest_MetaData)) };
-#if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DestintationState_MetaData[] = {
-				{ "Category", "SM_Branch" },
-				{ "ModuleRelativePath", "Public/SM_State.h" },
-				{ "ToolTip", "State where we will go next if this branch is taken.  if null, the branch will be ignored." },
-			};
-#endif
-			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_DestintationState = { UE4CodeGen_Private::EPropertyClass::Object, "DestintationState", RF_Public|RF_Transient|RF_MarkAsNative, 0x0020080000000001, 1, nullptr, STRUCT_OFFSET(USM_Branch, DestintationState), Z_Construct_UClass_USM_State_NoRegister, METADATA_PARAMS(NewProp_DestintationState_MetaData, ARRAY_COUNT(NewProp_DestintationState_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_AcceptableInputs,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_AcceptableInputs_Inner,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_bReverseInputTest,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_DestintationState,
 			};
 			static const FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 				TCppClassTypeTraits<USM_Branch>::IsAbstract,
@@ -283,7 +330,7 @@ static struct FScriptStruct_StateMachine_StaticRegisterNativesFStateMachineResul
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USM_Branch, 4163885009);
+	IMPLEMENT_CLASS(USM_Branch, 2775276067);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_USM_Branch(Z_Construct_UClass_USM_Branch, &USM_Branch::StaticClass, TEXT("/Script/StateMachine"), TEXT("USM_Branch"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(USM_Branch);
 	void USM_State::StaticRegisterNativesUSM_State()

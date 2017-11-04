@@ -97,53 +97,52 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_59_RPC_WRAPPERS_NO_PURE_DECLS
 #define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_59_INCLASS_NO_PURE_DECLS \
 private: \
-	static void StaticRegisterNativesUSM_Branch(); \
-	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_Branch(); \
+	static void StaticRegisterNativesUSM_BranchBase(); \
+	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_BranchBase(); \
 public: \
-	DECLARE_CLASS(USM_Branch, UDataAsset, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/StateMachine"), NO_API) \
-	DECLARE_SERIALIZER(USM_Branch) \
+	DECLARE_CLASS(USM_BranchBase, UDataAsset, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/StateMachine"), NO_API) \
+	DECLARE_SERIALIZER(USM_BranchBase) \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
 #define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_59_INCLASS \
 private: \
-	static void StaticRegisterNativesUSM_Branch(); \
-	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_Branch(); \
+	static void StaticRegisterNativesUSM_BranchBase(); \
+	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_BranchBase(); \
 public: \
-	DECLARE_CLASS(USM_Branch, UDataAsset, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/StateMachine"), NO_API) \
-	DECLARE_SERIALIZER(USM_Branch) \
+	DECLARE_CLASS(USM_BranchBase, UDataAsset, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/StateMachine"), NO_API) \
+	DECLARE_SERIALIZER(USM_BranchBase) \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
 #define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_59_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API USM_Branch(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USM_Branch) \
-	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USM_Branch); \
-DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USM_Branch); \
+	NO_API USM_BranchBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USM_BranchBase) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USM_BranchBase); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USM_BranchBase); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
-	NO_API USM_Branch(USM_Branch&&); \
-	NO_API USM_Branch(const USM_Branch&); \
+	NO_API USM_BranchBase(USM_BranchBase&&); \
+	NO_API USM_BranchBase(const USM_BranchBase&); \
 public:
 
 
 #define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_59_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API USM_Branch(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+	NO_API USM_BranchBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
-	NO_API USM_Branch(USM_Branch&&); \
-	NO_API USM_Branch(const USM_Branch&); \
+	NO_API USM_BranchBase(USM_BranchBase&&); \
+	NO_API USM_BranchBase(const USM_BranchBase&); \
 public: \
-	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USM_Branch); \
-DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USM_Branch); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USM_Branch)
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USM_BranchBase); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USM_BranchBase); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USM_BranchBase)
 
 
 #define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_59_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__DestintationState() { return STRUCT_OFFSET(USM_Branch, DestintationState); } \
-	FORCEINLINE static uint32 __PPO__AcceptableInputs() { return STRUCT_OFFSET(USM_Branch, AcceptableInputs); }
+	FORCEINLINE static uint32 __PPO__DestintationState() { return STRUCT_OFFSET(USM_BranchBase, DestintationState); }
 
 
 #define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_56_PROLOG
@@ -169,7 +168,82 @@ private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_92_RPC_WRAPPERS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_79_RPC_WRAPPERS
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_79_RPC_WRAPPERS_NO_PURE_DECLS
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_79_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUSM_Branch(); \
+	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_Branch(); \
+public: \
+	DECLARE_CLASS(USM_Branch, USM_BranchBase, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/StateMachine"), NO_API) \
+	DECLARE_SERIALIZER(USM_Branch) \
+	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
+
+
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_79_INCLASS \
+private: \
+	static void StaticRegisterNativesUSM_Branch(); \
+	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_Branch(); \
+public: \
+	DECLARE_CLASS(USM_Branch, USM_BranchBase, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/StateMachine"), NO_API) \
+	DECLARE_SERIALIZER(USM_Branch) \
+	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
+
+
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_79_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API USM_Branch(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USM_Branch) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USM_Branch); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USM_Branch); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API USM_Branch(USM_Branch&&); \
+	NO_API USM_Branch(const USM_Branch&); \
+public:
+
+
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_79_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API USM_Branch(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API USM_Branch(USM_Branch&&); \
+	NO_API USM_Branch(const USM_Branch&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, USM_Branch); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USM_Branch); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USM_Branch)
+
+
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_79_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__AcceptableInputs() { return STRUCT_OFFSET(USM_Branch, AcceptableInputs); }
+
+
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_76_PROLOG
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_79_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_79_PRIVATE_PROPERTY_OFFSET \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_79_RPC_WRAPPERS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_79_INCLASS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_79_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_79_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_79_PRIVATE_PROPERTY_OFFSET \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_79_RPC_WRAPPERS_NO_PURE_DECLS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_79_INCLASS_NO_PURE_DECLS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_79_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_109_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execRunState) \
 	{ \
@@ -184,7 +258,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_92_RPC_WRAPPERS_NO_PURE_DECLS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_109_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execRunState) \
 	{ \
@@ -199,7 +273,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_92_INCLASS_NO_PURE_DECLS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_109_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUSM_State(); \
 	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_State(); \
@@ -209,7 +283,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_92_INCLASS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_109_INCLASS \
 private: \
 	static void StaticRegisterNativesUSM_State(); \
 	friend STATEMACHINE_API class UClass* Z_Construct_UClass_USM_State(); \
@@ -219,7 +293,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_92_STANDARD_CONSTRUCTORS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_109_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API USM_State(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(USM_State) \
@@ -232,7 +306,7 @@ private: \
 public:
 
 
-#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_92_ENHANCED_CONSTRUCTORS \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_109_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API USM_State(USM_State&&); \
@@ -243,31 +317,31 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USM_State); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(USM_State)
 
 
-#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_92_PRIVATE_PROPERTY_OFFSET \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_109_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CompletionType() { return STRUCT_OFFSET(USM_State, CompletionType); } \
 	FORCEINLINE static uint32 __PPO__InstancedBranches() { return STRUCT_OFFSET(USM_State, InstancedBranches); } \
 	FORCEINLINE static uint32 __PPO__SharedBranches() { return STRUCT_OFFSET(USM_State, SharedBranches); }
 
 
-#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_89_PROLOG
-#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_92_GENERATED_BODY_LEGACY \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_106_PROLOG
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_109_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_92_PRIVATE_PROPERTY_OFFSET \
-	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_92_RPC_WRAPPERS \
-	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_92_INCLASS \
-	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_92_STANDARD_CONSTRUCTORS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_109_PRIVATE_PROPERTY_OFFSET \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_109_RPC_WRAPPERS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_109_INCLASS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_109_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_92_GENERATED_BODY \
+#define PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_109_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_92_PRIVATE_PROPERTY_OFFSET \
-	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_92_RPC_WRAPPERS_NO_PURE_DECLS \
-	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_92_INCLASS_NO_PURE_DECLS \
-	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_92_ENHANCED_CONSTRUCTORS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_109_PRIVATE_PROPERTY_OFFSET \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_109_RPC_WRAPPERS_NO_PURE_DECLS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_109_INCLASS_NO_PURE_DECLS \
+	PluginProject_Plugins_StateMachine_Source_StateMachine_Public_SM_State_h_109_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

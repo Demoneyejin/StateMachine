@@ -54,23 +54,40 @@ public:
 
 
 UCLASS(EditInlineNew)
-class STATEMACHINE_API USM_Branch : public UDataAsset
+class STATEMACHINE_API USM_BranchBase : public UDataAsset
 {
 	GENERATED_BODY()
-
 public:
-	/*Returns DestinationState on sucess, NULL on failure. 
+	/*Returns DestinationState on sucess, NULL on failure.
 	/ For Subclasses, OutDataIndex might be something other than 1, if a branch
 	/ is made to consume multiple inputs. */
 
 	virtual USM_State* TryBranch(const UObject* RefObject, const TArray<USM_InputAtom*>& DataSource,
 		int32 DataIndex, int32 &OutDataIndex);
 
-
 protected:
 	// State where we will go next if this branch is taken.  if null, the branch will be ignored.
 	UPROPERTY(EditAnywhere)
 	USM_State* DestintationState;
+
+
+};
+
+UCLASS(EditInlineNew)
+class STATEMACHINE_API USM_Branch : public USM_BranchBase
+{
+	GENERATED_BODY()
+
+public:
+	/*Returns DestinationState on sucess, NULL on failure. 
+	 For Subclasses, OutDataIndex might be something other than 1, if a branch
+	 is made to consume multiple inputs. */
+
+	virtual USM_State* TryBranch(const UObject* RefObject, const TArray<USM_InputAtom*>& DataSource,
+		int32 DataIndex, int32 &OutDataIndex) override;
+
+
+protected:
 
 	//If true, the meaning of acceptable Inputs is reversed.
 	UPROPERTY(EditAnywhere)
