@@ -263,17 +263,17 @@ void EmptyLinkFunctionForGeneratedCodeController_Atoms() {}
 			};
 #endif
 #if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InputDirection_MetaData[] = {
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ButtonState_MetaData[] = {
 				{ "Category", "CButtonInputAtom" },
 				{ "ModuleRelativePath", "Controller_Atoms.h" },
 				{ "ToolTip", "Which direction we're describing with this atom." },
 			};
 #endif
-			static const UE4CodeGen_Private::FEnumPropertyParams NewProp_InputDirection = { UE4CodeGen_Private::EPropertyClass::Enum, "InputDirection", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000001, 1, nullptr, STRUCT_OFFSET(UCButtonInputAtom, InputDirection), Z_Construct_UEnum_StateMachinePlugin_ECButtonState, METADATA_PARAMS(NewProp_InputDirection_MetaData, ARRAY_COUNT(NewProp_InputDirection_MetaData)) };
-			static const UE4CodeGen_Private::FBytePropertyParams NewProp_InputDirection_Underlying = { UE4CodeGen_Private::EPropertyClass::Byte, "UnderlyingType", RF_Public|RF_Transient|RF_MarkAsNative, 0x0000000000000000, 1, nullptr, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+			static const UE4CodeGen_Private::FEnumPropertyParams NewProp_ButtonState = { UE4CodeGen_Private::EPropertyClass::Enum, "ButtonState", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000001, 1, nullptr, STRUCT_OFFSET(UCButtonInputAtom, ButtonState), Z_Construct_UEnum_StateMachinePlugin_ECButtonState, METADATA_PARAMS(NewProp_ButtonState_MetaData, ARRAY_COUNT(NewProp_ButtonState_MetaData)) };
+			static const UE4CodeGen_Private::FBytePropertyParams NewProp_ButtonState_Underlying = { UE4CodeGen_Private::EPropertyClass::Byte, "UnderlyingType", RF_Public|RF_Transient|RF_MarkAsNative, 0x0000000000000000, 1, nullptr, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_InputDirection,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_InputDirection_Underlying,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ButtonState,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ButtonState_Underlying,
 			};
 			static const FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 				TCppClassTypeTraits<UCButtonInputAtom>::IsAbstract,
@@ -293,7 +293,7 @@ void EmptyLinkFunctionForGeneratedCodeController_Atoms() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCButtonInputAtom, 2888788433);
+	IMPLEMENT_CLASS(UCButtonInputAtom, 3374375635);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UCButtonInputAtom(Z_Construct_UClass_UCButtonInputAtom, &UCButtonInputAtom::StaticClass, TEXT("/Script/StateMachinePlugin"), TEXT("UCButtonInputAtom"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UCButtonInputAtom);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

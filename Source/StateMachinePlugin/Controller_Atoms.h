@@ -66,7 +66,7 @@ public:
 
 	//Which direction we're describing with this atom.
 	UPROPERTY(EditAnywhere)
-	ECButtonState InputDirection;
+	ECButtonState ButtonState;
 
 };
 

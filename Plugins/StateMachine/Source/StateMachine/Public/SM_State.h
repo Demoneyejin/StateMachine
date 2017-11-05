@@ -53,24 +53,21 @@ public:
 };
 
 
-UCLASS()
+UCLASS(EditInlineNew)
 class STATEMACHINE_API USM_BranchBase : public UDataAsset
 {
 	GENERATED_BODY()
-public:
-	/*Returns DestinationState on sucess, NULL on failure.
-	/ For Subclasses, OutDataIndex might be something other than 1, if a branch
-	/ is made to consume multiple inputs. */
 
+public:
+	/** Returns DestinationState on success, NULL on failure. For subclasses, OutDataIndex
+	can be changed to indicate consumption of data. */
 	virtual USM_State* TryBranch(const UObject* RefObject, const TArray<USM_InputAtom*>& DataSource,
 		int32 DataIndex, int32 &OutDataIndex);
 
 protected:
-	// State where we will go next if this branch is taken.  if null, the branch will be ignored.
+	// State where we will go next if this branch is taken. If null, this branch will be ignored.
 	UPROPERTY(EditAnywhere)
-	USM_State* DestintationState;
-
-
+		USM_State* DestinationState;
 };
 
 UCLASS(EditInlineNew)
@@ -79,24 +76,19 @@ class STATEMACHINE_API USM_Branch : public USM_BranchBase
 	GENERATED_BODY()
 
 public:
-	/*Returns DestinationState on sucess, NULL on failure. 
-	 For Subclasses, OutDataIndex might be something other than 1, if a branch
-	 is made to consume multiple inputs. */
-
+	/** Returns DestinationState on success, NULL on failure. For subclasses,
+	OutDataIndex might be something other than 1, if a branch is made to consume multiple inputs. */
 	virtual USM_State* TryBranch(const UObject* RefObject, const TArray<USM_InputAtom*>& DataSource,
 		int32 DataIndex, int32 &OutDataIndex) override;
 
-
 protected:
-
-	//If true, the meaning of acceptable Inputs is reversed.
+	// If true, the meaning of AcceptableInputs is reversed.
 	UPROPERTY(EditAnywhere)
-	uint32 bReverseInputTest : 1;  //Anything not in the list of input atoms is true
+		uint32 bReverseInputTest : 1;
 
-	//Acceptable inputs. The current input atom must be on this list.
+	// Acceptable inputs. The current input atom must be on this list.
 	UPROPERTY(EditAnywhere)
-	TArray<USM_InputAtom*> AcceptableInputs;
-
+		TArray<USM_InputAtom*> AcceptableInputs;
 };
 
 

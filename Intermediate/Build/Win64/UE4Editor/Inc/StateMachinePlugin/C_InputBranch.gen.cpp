@@ -93,7 +93,7 @@ void EmptyLinkFunctionForGeneratedCodeC_InputBranch() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UC_InputBranch, 1933351854);
+	IMPLEMENT_CLASS(UC_InputBranch, 4082477010);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UC_InputBranch(Z_Construct_UClass_UC_InputBranch, &UC_InputBranch::StaticClass, TEXT("/Script/StateMachinePlugin"), TEXT("UC_InputBranch"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UC_InputBranch);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
