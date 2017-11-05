@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\StateMachinePlugin.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{44DCB834-60AA-4029-9975-3DCA2F2C8856}</UniqueIdentifier>
+			<UniqueIdentifier>{088488F7-D0B7-42E6-ABEA-A2E310A64A38}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\StateMachinePlugin.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{4800CE46-B0D7-4583-B8A2-C3BDD3A5E011}</UniqueIdentifier>
+			<UniqueIdentifier>{21D8628F-9006-4F9D-AFEB-552F9790DEEB}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -24,23 +24,26 @@
 		<None Include="..\..\Config\DefaultGame.ini">
 			<Filter>Config</Filter>
 		</None >
+		<None Include="..\..\Config\DefaultInput.ini">
+			<Filter>Config</Filter>
+		</None >
 		<Filter Include="Plugins">
-			<UniqueIdentifier>{0CD4E386-BC13-4471-8044-6012F1D17859}</UniqueIdentifier>
+			<UniqueIdentifier>{BA63FA66-5A95-4EC4-9088-9AEEA58B1A43}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\StateMachine">
-			<UniqueIdentifier>{747A615D-6E19-47CB-95FF-C90C75884E26}</UniqueIdentifier>
+			<UniqueIdentifier>{DFC551ED-AF78-4B2B-A493-BE388AD31865}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\StateMachine\Source">
-			<UniqueIdentifier>{BB33BF09-8B1D-4A0F-8EC5-689D8082821F}</UniqueIdentifier>
+			<UniqueIdentifier>{569E407A-016F-4D15-B5FA-B7A2FA0E6B04}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\StateMachine\Source\StateMachine">
-			<UniqueIdentifier>{75710AFA-DD5A-4148-B1AC-7939259D974B}</UniqueIdentifier>
+			<UniqueIdentifier>{86578D4B-C65D-4A17-B625-39972351EBFA}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Plugins\StateMachine\Source\StateMachine\StateMachine.Build.cs">
 			<Filter>Plugins\StateMachine\Source\StateMachine</Filter>
 		</None >
 		<Filter Include="Plugins\StateMachine\Source\StateMachine\Private">
-			<UniqueIdentifier>{CECD5388-9E2D-40E1-AA44-DE2AA0948120}</UniqueIdentifier>
+			<UniqueIdentifier>{2D7B4A27-65EA-41FE-928D-D27DD5ED2088}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Plugins\StateMachine\Source\StateMachine\Private\SM_State.cpp">
 			<Filter>Plugins\StateMachine\Source\StateMachine\Private</Filter>
@@ -49,7 +52,7 @@
 			<Filter>Plugins\StateMachine\Source\StateMachine\Private</Filter>
 		</ClCompile >
 		<Filter Include="Plugins\StateMachine\Source\StateMachine\Public">
-			<UniqueIdentifier>{7F81BA3F-6E73-4A99-AC4C-1CDFDFEBCC9F}</UniqueIdentifier>
+			<UniqueIdentifier>{EE8826BE-5F72-49E6-9702-0535FDA00A9F}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\Plugins\StateMachine\Source\StateMachine\Public\SM_State.h">
 			<Filter>Plugins\StateMachine\Source\StateMachine\Public</Filter>
@@ -61,14 +64,26 @@
 			<Filter>Plugins\StateMachine</Filter>
 		</None >
 		<Filter Include="Plugins\StateMachine\Resources">
-			<UniqueIdentifier>{35EEB595-F289-478D-BE46-A53080041A82}</UniqueIdentifier>
+			<UniqueIdentifier>{DD294072-9C50-4343-AF09-1BF83984C8BB}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Plugins\StateMachine\Resources\Icon128.png">
 			<Filter>Plugins\StateMachine\Resources</Filter>
 		</None >
 		<Filter Include="Source\StateMachinePlugin">
-			<UniqueIdentifier>{A45775AC-9F25-4363-8A8D-BE97BCC5064A}</UniqueIdentifier>
+			<UniqueIdentifier>{BA5B869F-D577-461C-9F91-9B060F8CBA49}</UniqueIdentifier>
 		</Filter>
+		<ClCompile Include="..\..\Source\StateMachinePlugin\ComboLink.cpp">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\StateMachinePlugin\ComboLink.h">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\StateMachinePlugin\Combos.cpp">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\StateMachinePlugin\Combos.h">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</ClInclude >
 		<ClCompile Include="..\..\Source\StateMachinePlugin\Controller_Atoms.cpp">
 			<Filter>Source\StateMachinePlugin</Filter>
 		</ClCompile >
@@ -79,6 +94,18 @@
 			<Filter>Source\StateMachinePlugin</Filter>
 		</ClCompile >
 		<ClInclude Include="..\..\Source\StateMachinePlugin\C_InputBranch.h">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\StateMachinePlugin\C_State.cpp">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\StateMachinePlugin\C_State.h">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\StateMachinePlugin\OurPawn.cpp">
+			<Filter>Source\StateMachinePlugin</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\StateMachinePlugin\OurPawn.h">
 			<Filter>Source\StateMachinePlugin</Filter>
 		</ClInclude >
 		<ClCompile Include="..\..\Source\StateMachinePlugin\Quest.cpp">

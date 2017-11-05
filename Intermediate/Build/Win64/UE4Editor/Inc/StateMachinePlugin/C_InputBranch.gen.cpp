@@ -15,7 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeC_InputBranch() {}
 // Cross Module References
 	STATEMACHINEPLUGIN_API UClass* Z_Construct_UClass_UC_InputBranch_NoRegister();
 	STATEMACHINEPLUGIN_API UClass* Z_Construct_UClass_UC_InputBranch();
-	STATEMACHINE_API UClass* Z_Construct_UClass_USM_Branch();
+	STATEMACHINE_API UClass* Z_Construct_UClass_USM_BranchBase();
 	UPackage* Z_Construct_UPackage__Script_StateMachinePlugin();
 // End Cross Module References
 	void UC_InputBranch::StaticRegisterNativesUC_InputBranch()
@@ -31,7 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeC_InputBranch() {}
 		if (!OuterClass)
 		{
 			static UObject* (*const DependentSingletons[])() = {
-				(UObject* (*)())Z_Construct_UClass_USM_Branch,
+				(UObject* (*)())Z_Construct_UClass_USM_BranchBase,
 				(UObject* (*)())Z_Construct_UPackage__Script_StateMachinePlugin,
 			};
 #if WITH_METADATA
@@ -93,7 +93,7 @@ void EmptyLinkFunctionForGeneratedCodeC_InputBranch() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UC_InputBranch, 2010655405);
+	IMPLEMENT_CLASS(UC_InputBranch, 1933351854);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UC_InputBranch(Z_Construct_UClass_UC_InputBranch, &UC_InputBranch::StaticClass, TEXT("/Script/StateMachinePlugin"), TEXT("UC_InputBranch"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UC_InputBranch);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

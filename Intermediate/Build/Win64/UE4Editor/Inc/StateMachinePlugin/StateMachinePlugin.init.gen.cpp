@@ -19,8 +19,8 @@ void EmptyLinkFunctionForGeneratedCodeStateMachinePlugin_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/StateMachinePlugin",
 				PKG_CompiledIn | 0x00000000,
-				0x9689BFA9,
-				0xE22C339C,
+				0xA8F331D5,
+				0xEE7AD126,
 				nullptr, 0,
 				METADATA_PARAMS(nullptr, 0)
 			};

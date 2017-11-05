@@ -38,9 +38,7 @@ UENUM(Blueprintable, Meta = (Bitflags))
 enum class ECInputButtons : uint8
 {
 	LeftFace,
-	TopFace,
 	BottomFace,
-	RightFace,
 	Count UMETA(Hidden)
 };
 

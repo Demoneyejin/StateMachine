@@ -356,6 +356,10 @@
 /I "C:\Program Files\Epic Games\UE_4.18\Engine\Source\Runtime\AudioMixer\Public\DSP"
 /I "C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AudioMixer"
 /I "C:\Program Files\Epic Games\UE_4.18\Engine\Source\Runtime\AudioMixer"
+/I "C:\Program Files\Epic Games\UE_4.18\Engine\Plugins\2D\Paper2D\Source\Paper2D\Classes"
+/I "C:\Program Files\Epic Games\UE_4.18\Engine\Plugins\2D\Paper2D\Source\Paper2D\Public"
+/I "C:\Program Files\Epic Games\UE_4.18\Engine\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D"
+/I "C:\Program Files\Epic Games\UE_4.18\Engine\Plugins\2D\Paper2D\Source\Paper2D"
 /I C:\Users\wolfw\OneDrive\Documents\StateMachine\Plugins\StateMachine\Source
 /I C:\Users\wolfw\OneDrive\Documents\StateMachine\Plugins\StateMachine\Source\StateMachine\Public
 /I C:\Users\wolfw\OneDrive\Documents\StateMachine\Plugins\StateMachine\Intermediate\Build\Win64\UE4Editor\Inc\StateMachine

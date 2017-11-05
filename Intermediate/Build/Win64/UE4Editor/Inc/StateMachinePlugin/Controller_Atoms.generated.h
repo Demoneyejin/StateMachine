@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define STATEMACHINEPLUGIN_Controller_Atoms_generated_h
 
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_51_RPC_WRAPPERS
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_51_RPC_WRAPPERS_NO_PURE_DECLS
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_51_INCLASS_NO_PURE_DECLS \
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_49_RPC_WRAPPERS
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_49_RPC_WRAPPERS_NO_PURE_DECLS
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_49_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCDirectionalInputAtom(); \
 	friend STATEMACHINEPLUGIN_API class UClass* Z_Construct_UClass_UCDirectionalInputAtom(); \
@@ -25,7 +25,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_51_INCLASS \
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_49_INCLASS \
 private: \
 	static void StaticRegisterNativesUCDirectionalInputAtom(); \
 	friend STATEMACHINEPLUGIN_API class UClass* Z_Construct_UClass_UCDirectionalInputAtom(); \
@@ -35,7 +35,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_51_STANDARD_CONSTRUCTORS \
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_49_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCDirectionalInputAtom(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UCDirectionalInputAtom) \
@@ -48,7 +48,7 @@ private: \
 public:
 
 
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_51_ENHANCED_CONSTRUCTORS \
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_49_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCDirectionalInputAtom(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -61,33 +61,33 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UCDirectionalInputAtom); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UCDirectionalInputAtom)
 
 
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_51_PRIVATE_PROPERTY_OFFSET
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_48_PROLOG
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_51_GENERATED_BODY_LEGACY \
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_49_PRIVATE_PROPERTY_OFFSET
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_46_PROLOG
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_49_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_51_PRIVATE_PROPERTY_OFFSET \
-	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_51_RPC_WRAPPERS \
-	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_51_INCLASS \
-	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_51_STANDARD_CONSTRUCTORS \
+	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_49_PRIVATE_PROPERTY_OFFSET \
+	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_49_RPC_WRAPPERS \
+	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_49_INCLASS \
+	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_49_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_51_GENERATED_BODY \
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_49_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_51_PRIVATE_PROPERTY_OFFSET \
-	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_51_RPC_WRAPPERS_NO_PURE_DECLS \
-	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_51_INCLASS_NO_PURE_DECLS \
-	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_51_ENHANCED_CONSTRUCTORS \
+	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_49_PRIVATE_PROPERTY_OFFSET \
+	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_49_RPC_WRAPPERS_NO_PURE_DECLS \
+	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_49_INCLASS_NO_PURE_DECLS \
+	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_49_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_65_RPC_WRAPPERS
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_65_RPC_WRAPPERS_NO_PURE_DECLS
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_65_INCLASS_NO_PURE_DECLS \
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_63_RPC_WRAPPERS
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_63_RPC_WRAPPERS_NO_PURE_DECLS
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_63_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCButtonInputAtom(); \
 	friend STATEMACHINEPLUGIN_API class UClass* Z_Construct_UClass_UCButtonInputAtom(); \
@@ -97,7 +97,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_65_INCLASS \
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_63_INCLASS \
 private: \
 	static void StaticRegisterNativesUCButtonInputAtom(); \
 	friend STATEMACHINEPLUGIN_API class UClass* Z_Construct_UClass_UCButtonInputAtom(); \
@@ -107,7 +107,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_65_STANDARD_CONSTRUCTORS \
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_63_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCButtonInputAtom(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UCButtonInputAtom) \
@@ -120,7 +120,7 @@ private: \
 public:
 
 
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_65_ENHANCED_CONSTRUCTORS \
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_63_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCButtonInputAtom(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -133,26 +133,26 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UCButtonInputAtom); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UCButtonInputAtom)
 
 
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_65_PRIVATE_PROPERTY_OFFSET
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_62_PROLOG
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_65_GENERATED_BODY_LEGACY \
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_63_PRIVATE_PROPERTY_OFFSET
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_60_PROLOG
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_63_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_65_PRIVATE_PROPERTY_OFFSET \
-	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_65_RPC_WRAPPERS \
-	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_65_INCLASS \
-	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_65_STANDARD_CONSTRUCTORS \
+	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_63_PRIVATE_PROPERTY_OFFSET \
+	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_63_RPC_WRAPPERS \
+	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_63_INCLASS \
+	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_63_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_65_GENERATED_BODY \
+#define StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_63_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_65_PRIVATE_PROPERTY_OFFSET \
-	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_65_RPC_WRAPPERS_NO_PURE_DECLS \
-	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_65_INCLASS_NO_PURE_DECLS \
-	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_65_ENHANCED_CONSTRUCTORS \
+	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_63_PRIVATE_PROPERTY_OFFSET \
+	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_63_RPC_WRAPPERS_NO_PURE_DECLS \
+	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_63_INCLASS_NO_PURE_DECLS \
+	StateMachine_Source_StateMachinePlugin_Controller_Atoms_h_63_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -163,9 +163,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 #define FOREACH_ENUM_ECINPUTBUTTONS(op) \
 	op(ECInputButtons::LeftFace) \
-	op(ECInputButtons::TopFace) \
-	op(ECInputButtons::BottomFace) \
-	op(ECInputButtons::RightFace) 
+	op(ECInputButtons::BottomFace) 
 #define FOREACH_ENUM_ECBUTTONSTATE(op) \
 	op(ECButtonState::Up) \
 	op(ECButtonState::JustPressed) \

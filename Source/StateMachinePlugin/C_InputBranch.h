@@ -10,8 +10,8 @@
 /**
  * 
  */
-UCLASS()
-class STATEMACHINEPLUGIN_API UC_InputBranch : public USM_Branch
+UCLASS(EditInlineNew)
+class STATEMACHINEPLUGIN_API UC_InputBranch : public USM_BranchBase
 {
 	GENERATED_BODY()
 	

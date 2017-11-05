@@ -33,7 +33,7 @@ void EmptyLinkFunctionForGeneratedCodeController_Atoms() {}
 		return Singleton;
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ECInputButtons(ECInputButtons_StaticEnum, TEXT("/Script/StateMachinePlugin"), TEXT("ECInputButtons"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_StateMachinePlugin_ECInputButtons_CRC() { return 1184562812U; }
+	uint32 Get_Z_Construct_UEnum_StateMachinePlugin_ECInputButtons_CRC() { return 1172629870U; }
 	UEnum* Z_Construct_UEnum_StateMachinePlugin_ECInputButtons()
 	{
 #if WITH_HOT_RELOAD
@@ -46,9 +46,7 @@ void EmptyLinkFunctionForGeneratedCodeController_Atoms() {}
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "ECInputButtons::LeftFace", (int64)ECInputButtons::LeftFace },
-				{ "ECInputButtons::TopFace", (int64)ECInputButtons::TopFace },
 				{ "ECInputButtons::BottomFace", (int64)ECInputButtons::BottomFace },
-				{ "ECInputButtons::RightFace", (int64)ECInputButtons::RightFace },
 				{ "ECInputButtons::Count", (int64)ECInputButtons::Count },
 			};
 #if WITH_METADATA

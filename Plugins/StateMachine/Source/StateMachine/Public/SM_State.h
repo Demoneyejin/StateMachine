@@ -53,7 +53,7 @@ public:
 };
 
 
-UCLASS(EditInlineNew)
+UCLASS()
 class STATEMACHINE_API USM_BranchBase : public UDataAsset
 {
 	GENERATED_BODY()

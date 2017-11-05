@@ -20,7 +20,7 @@ private: \
 	static void StaticRegisterNativesUC_InputBranch(); \
 	friend STATEMACHINEPLUGIN_API class UClass* Z_Construct_UClass_UC_InputBranch(); \
 public: \
-	DECLARE_CLASS(UC_InputBranch, USM_Branch, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/StateMachinePlugin"), NO_API) \
+	DECLARE_CLASS(UC_InputBranch, USM_BranchBase, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/StateMachinePlugin"), NO_API) \
 	DECLARE_SERIALIZER(UC_InputBranch) \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
@@ -30,7 +30,7 @@ private: \
 	static void StaticRegisterNativesUC_InputBranch(); \
 	friend STATEMACHINEPLUGIN_API class UClass* Z_Construct_UClass_UC_InputBranch(); \
 public: \
-	DECLARE_CLASS(UC_InputBranch, USM_Branch, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/StateMachinePlugin"), NO_API) \
+	DECLARE_CLASS(UC_InputBranch, USM_BranchBase, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/StateMachinePlugin"), NO_API) \
 	DECLARE_SERIALIZER(UC_InputBranch) \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
