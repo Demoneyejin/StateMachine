@@ -14,7 +14,7 @@ USM_State::USM_State()
 USM_State* USM_BranchBase::TryBranch(const UObject* RefObject, const TArray<USM_InputAtom*>& DataSource,
 	int32 DataIndex, int32 &OutDataIndex) {
 	OutDataIndex = DataIndex;
-	return DestintationState;
+	return DestinationState;
 }
 
 
@@ -28,9 +28,9 @@ USM_State * USM_Branch::TryBranch(const UObject* RefObject, const TArray<USM_Inp
 	if (DataSource.IsValidIndex(DataIndex) && AcceptableInputs.Contains(DataSource[DataIndex]))
 	{
 		
-		return bReverseInputTest ? nullptr : DestintationState; //return reverse or destination
+		return bReverseInputTest ? nullptr : DestinationState; //return reverse or destination
 	}
-	return bReverseInputTest ? DestintationState : nullptr;
+	return bReverseInputTest ? DestinationState : nullptr;
 }
 
 FStateMachineResult USM_State::RunState(const UObject* RefObject,

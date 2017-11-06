@@ -10,15 +10,16 @@
 /**
  * 
  */
-UCLASS(EditInlineNew)
+UCLASS()
 class STATEMACHINEPLUGIN_API UC_InputBranch : public USM_BranchBase
 {
 	GENERATED_BODY()
 	
 public:
 
-	/* Consumes two types of input direction(s) and button */
-	virtual USM_State* TryBranch(const UObject* RefObject, const TArray<USM_InputAtom*>& DataSource, int32 DataIndex, int32 &OutDataIndex)override;
+	/** Consumes 2 types of input - Direction + Button(s). */
+	virtual USM_State* TryBranch(const UObject* RefObject, const TArray<USM_InputAtom*>& DataSource,
+		int32 DataIndex, int32 &OutDataIndex) override;
 
 protected:
 

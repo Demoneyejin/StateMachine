@@ -135,10 +135,10 @@ protected:
 	// Branches to other states. These are in priority order, so the first successful branch
 	// will be taken.
 	UPROPERTY(EditAnywhere, Instanced)
-	TArray<USM_Branch*> InstancedBranches;
+	TArray<USM_BranchBase*> InstancedBranches;
 
 	//A branch all states related to this state share. These run after Instanced Branches
 	UPROPERTY(EditAnywhere)
-	TArray<USM_Branch*> SharedBranches;
+	TArray<USM_BranchBase*> SharedBranches;
 	
 };
