@@ -42,10 +42,19 @@ void AOurPawn::BeginPlay()
 	{
 		if (!ButtonAtoms.IsValidIndex(i) || !ButtonAtoms[i])
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Not enough button input atoms, or a NULL entry was found in the "));
+			UE_LOG(LogTemp, Warning, TEXT("Not enough button input atoms, or a NULL entry was found in the list."));
 			Destroy();
 			return;
 		}
+	}
+
+	//Get a reference to our flipbook component.
+	OurFlipbook = FindComponentByClass<UPaperFlipbookComponent>();
+	if (OurFlipbook == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("We were unable to get a reference to our flipbook component"))
+		Destroy();
+		return;
 	}
 	
 }
@@ -57,9 +66,6 @@ void AOurPawn::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	// Process input
-
-	// Add one atom for stick direction
 	const float DirectionThreshold = 0.5f;
 	UCDirectionalInputAtom* InputDirection = nullptr;
 	if (DirectionInput.X < -DirectionThreshold)
@@ -107,10 +113,9 @@ void AOurPawn::Tick(float DeltaTime)
 			InputDirection = DirectionUpForwardAtom;
 		}
 	}
-
 	InputStream.Add(InputDirection);
 
-	//Add one atom for each button's state.
+	// Add one atom for each button's state.
 	for (int32 i = 0; i < (int32)ECInputButtons::Count; ++i)
 	{
 		if (ButtonsDown & (1 << i))
@@ -122,24 +127,22 @@ void AOurPawn::Tick(float DeltaTime)
 			else
 			{
 				InputStream.Add(ButtonAtoms[(int32)ECButtonState::JustPressed]);
-
 			}
 		}
 		else
 		{
 			InputStream.Add(ButtonAtoms[(int32)ECButtonState::Up]);
-
 		}
 	}
+
+	// Always add an input time stamp to match the input sequence.
+	float CurrentTime = UKismetSystemLibrary::GetGameTimeInSeconds(this);
+	InputTimeStamps.Add(CurrentTime);
 
 	// Cache old button state so we can distinguish between held and just pressed.
 	ButtonsDown_Old = ButtonsDown;
 
-	//Always add input time stamp to match the input sequence.
-	float CurrentTime = UKismetSystemLibrary::GetGameTimeInSeconds(this);
-	InputTimeStamps.Add(CurrentTime);
-
-	// Prune old inputs. This would be better-suited to a ringbugger than an array, but it's not much data
+	// Prune old inputs. This would be better-suited to a ringbuffer than an array, but it's not much data.
 	for (int32 i = 0; i < InputStream.Num(); ++i)
 	{
 		if ((InputTimeStamps[i] + InputExpirationTime) >= CurrentTime)
@@ -155,7 +158,7 @@ void AOurPawn::Tick(float DeltaTime)
 	}
 
 	FComboLinkToFollow MoveLinkToFollow = CurrentMove->TryLinks(this, InputStream);
-	if (MoveLinkToFollow.Link)
+	if (MoveLinkToFollow.SMR.CompletionType == EStateMachineCompletionType::Accepted)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Switching to state %s"), *MoveLinkToFollow.Link->Move->MoveName.ToString());
 		if (MoveLinkToFollow.Link->bClearInput || MoveLinkToFollow.Link->Move->bClearInputOnEntry || CurrentMove->bClearInputOnExit)
@@ -167,20 +170,19 @@ void AOurPawn::Tick(float DeltaTime)
 		{
 			// Consume the input we used to get to this move.
 			check((MoveLinkToFollow.SMR.DataIndex % (1 + (int32)ECInputButtons::Count)) == 0);
-			InputTimeStamps.RemoveAt(0, MoveLinkToFollow.SMR.DataIndex / (1 + (int32)ECInputButtons::Count), false);
+			InputTimeStamps.RemoveAt(0, MoveLinkToFollow.SMR.DataIndex / 3, false);
 			InputStream.RemoveAt(0, MoveLinkToFollow.SMR.DataIndex, false);
 		}
 
-		//Set and start the new move.
+		// Set and start the new move.
 		CurrentMove = MoveLinkToFollow.Link->Move;
 		TimeInCurrentMove = 0.0f;
 		DoMove(CurrentMove);
 	}
 	else
 	{
-		TimeInCurrentMove += DeltaTime; // modulate by move animation length
+		TimeInCurrentMove += DeltaTime;		// Modulate by move animation length
 	}
-
 }
 
 // Called to bind functionality to input
@@ -190,16 +192,17 @@ void AOurPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	InputComponent->BindAxis("XAxis", this, &AOurPawn::ReadXAxis);
 	InputComponent->BindAxis("YAxis", this, &AOurPawn::ReadYAxis);
-	InputComponent->BindAction("LeftButton", IE_Pressed, this, &AOurPawn::LeftButtonPressed);
-	InputComponent->BindAction("LeftButton", IE_Released, this, &AOurPawn::LeftButtonReleased);
-	InputComponent->BindAction("BottomButton", IE_Pressed, this, &AOurPawn::BottomButtonPressed);
-	InputComponent->BindAction("BottomButton", IE_Released, this, &AOurPawn::BottomButtonReleased);
+	InputComponent->BindAction("Attack", IE_Pressed, this, &AOurPawn::LeftButtonPressed);
+	InputComponent->BindAction("Attack", IE_Released, this, &AOurPawn::LeftButtonReleased);
+	InputComponent->BindAction("Dodge", IE_Pressed, this, &AOurPawn::BottomButtonPressed);
+	InputComponent->BindAction("Dodge", IE_Released, this, &AOurPawn::BottomButtonReleased);
 
 }
 
 void AOurPawn::LeftButtonPressed()
 {
 	ButtonsDown |= (1 << (int32)ECInputButtons::LeftFace);
+	UE_LOG(LogTemp, Warning, TEXT("Button pressed"));
 }
 
 void AOurPawn::LeftButtonReleased()

@@ -66,7 +66,10 @@ USM_State* UC_InputBranch::TryBranch(const UObject* RefObject, const TArray<USM_
 		}
 		else
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Error: Expected %i button inputs, only found %i."), (int32)ECInputButtons::Count, i);
+			
+			UE_LOG(LogTemp, Warning, TEXT("Error: Expected %d button inputs, only found %d."), (int32)ECInputButtons::Count, i);
+			//UE_LOG(LogTemp, Warning, TEXT("Uh"));
+			//float x = 2 + 2;
 			return nullptr;
 		}
 	}

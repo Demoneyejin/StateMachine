@@ -85,7 +85,7 @@ void EmptyLinkFunctionForGeneratedCodeController_Atoms() {}
 		return Singleton;
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ECButtonState(ECButtonState_StaticEnum, TEXT("/Script/StateMachinePlugin"), TEXT("ECButtonState"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_StateMachinePlugin_ECButtonState_CRC() { return 1738663098U; }
+	uint32 Get_Z_Construct_UEnum_StateMachinePlugin_ECButtonState_CRC() { return 3543275630U; }
 	UEnum* Z_Construct_UEnum_StateMachinePlugin_ECButtonState()
 	{
 #if WITH_HOT_RELOAD
@@ -104,9 +104,7 @@ void EmptyLinkFunctionForGeneratedCodeController_Atoms() {}
 			};
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "BlueprintType", "true" },
 				{ "Count.Hidden", "" },
-				{ "IsBlueprintBase", "true" },
 				{ "ModuleRelativePath", "Controller_Atoms.h" },
 				{ "ToolTip", "Button state: is it currently up, Just pressed, held down, etc. Have the count if we want to charge." },
 			};

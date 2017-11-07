@@ -24,7 +24,7 @@ enum class ECInputDirections : uint8
 };
 
 //Button state: is it currently up, Just pressed, held down, etc. Have the count if we want to charge.
-UENUM(Blueprintable)
+UENUM()
 enum class ECButtonState : uint8 
 {
 	Up,

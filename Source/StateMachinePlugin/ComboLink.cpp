@@ -2,6 +2,8 @@
 
 #include "ComboLink.h"
 #include "OurPawn.h"
+#include "PaperFlipbook.h"
+#include "PaperFlipbookComponent.h"
 
 
 
@@ -13,7 +15,11 @@ FStateMachineResult UComboLink::TryLink(const AOurPawn* RefObject, const TArray<
 		bool bCanCancel = false;
 		for (const FVector2D& CancelWindow : CancelWindows)
 		{
-			if (RefObject->GetTimeInMove() == FMath::Clamp(RefObject->GetTimeInMove(), CancelWindow.X, CancelWindow.Y))
+			 
+			
+			float OurCancelWindowX = RefObject->GetOurPawnFlipbook()->GetFlipbookLength() * 0.8;
+
+			if (RefObject->GetTimeInMove() == FMath::Clamp(RefObject->GetTimeInMove(), OurCancelWindowX, CancelWindow.Y))
 			{
 				bCanCancel = true;
 				break;

@@ -5,7 +5,10 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 #include "Controller_Atoms.h"
+#include "PaperFlipbook.h"
+#include "PaperFlipbookComponent.h"
 #include "OurPawn.generated.h"
+
 
 
 class UCombos;
@@ -83,6 +86,8 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	FORCEINLINE float GetTimeInMove() const { return TimeInCurrentMove; }
+	FORCEINLINE UPaperFlipbookComponent* GetOurPawnFlipbook() const { return OurFlipbook; }
+	
 
 private:
 
@@ -92,5 +97,7 @@ private:
 
 	UPROPERTY(VisibleInstanceOnly)
 	TArray<USM_InputAtom*> InputStream;
-	
+
+	UPROPERTY(VisibleAnywhere)
+	UPaperFlipbookComponent* OurFlipbook;
 };
