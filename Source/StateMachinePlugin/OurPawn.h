@@ -12,6 +12,7 @@
 
 
 class UCombos;
+class UOurMovementComponent;
 
 UCLASS()
 class STATEMACHINEPLUGIN_API AOurPawn : public APawn
@@ -21,6 +22,11 @@ class STATEMACHINEPLUGIN_API AOurPawn : public APawn
 public:
 	// Sets default values for this pawn's properties
 	AOurPawn();
+
+
+	//Our custom movement component
+	UPROPERTY(EditDefaultsOnly)
+	UOurMovementComponent* PawnMovementComp;
 
 protected:
 	// Called when the game starts or when spawned
@@ -100,4 +106,9 @@ private:
 
 	UPROPERTY(VisibleAnywhere)
 	UPaperFlipbookComponent* OurFlipbook;
+
+
+	UPROPERTY(VisibleAnywhere)
+	bool IsDoingMove = false;
+
 };

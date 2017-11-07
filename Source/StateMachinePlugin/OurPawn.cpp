@@ -4,6 +4,7 @@
 #include "Controller_Atoms.h"
 #include "Combos.h"
 #include "ComboLink.h"
+#include "OurMovementComponent.h"
 #include "Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h"
 
 
@@ -13,7 +14,12 @@ AOurPawn::AOurPawn()
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	InputExpirationTime = 2.0f;
+	InputExpirationTime = 2.5f;
+
+
+	//Our Custom Movement Component
+	PawnMovementComp = CreateDefaultSubobject<UOurMovementComponent>(TEXT("Movement Component"));
+	PawnMovementComp->UpdatedComponent = RootComponent;
 
 }
 
@@ -160,6 +166,15 @@ void AOurPawn::Tick(float DeltaTime)
 	FComboLinkToFollow MoveLinkToFollow = CurrentMove->TryLinks(this, InputStream);
 	if (MoveLinkToFollow.SMR.CompletionType == EStateMachineCompletionType::Accepted)
 	{
+
+		if (MoveLinkToFollow.Link->Move->MoveName.ToString().Contains(FString("Attack")))
+		{
+			IsDoingMove = true;
+		}
+		else
+		{
+			IsDoingMove = false;
+		}
 		UE_LOG(LogTemp, Warning, TEXT("Switching to state %s"), *MoveLinkToFollow.Link->Move->MoveName.ToString());
 		if (MoveLinkToFollow.Link->bClearInput || MoveLinkToFollow.Link->Move->bClearInputOnEntry || CurrentMove->bClearInputOnExit)
 		{
@@ -182,6 +197,7 @@ void AOurPawn::Tick(float DeltaTime)
 	else
 	{
 		TimeInCurrentMove += DeltaTime;		// Modulate by move animation length
+		
 	}
 }
 
@@ -223,9 +239,18 @@ void AOurPawn::BottomButtonReleased()
 void AOurPawn::ReadXAxis(float Value)
 {
 	DirectionInput.X = Value;
+	if (IsDoingMove == false)
+	{
+		PawnMovementComp->AddInputVector(FVector(1.0, 0.0, 0.0) * Value);
+	}
 }
 
 void AOurPawn::ReadYAxis(float Value)
 {
 	DirectionInput.Y = Value;
+	if (IsDoingMove == false)
+	{
+		PawnMovementComp->AddInputVector(FVector(0.0, -1.0, 0.0) * Value);
+	}
+
 }
