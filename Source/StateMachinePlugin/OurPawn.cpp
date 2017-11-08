@@ -79,6 +79,8 @@ void AOurPawn::Tick(float DeltaTime)
 		if (DirectionInput.Y < -DirectionThreshold)
 		{
 			InputDirection = DirectionDownBackAtom;
+			if(IsDoingMove == false)
+				MoveDownAnim();
 		}
 		else if (DirectionInput.Y < DirectionThreshold)
 		{
@@ -87,6 +89,9 @@ void AOurPawn::Tick(float DeltaTime)
 		else
 		{
 			InputDirection = DirectionUpBackAtom;
+			if (IsDoingMove == false)
+				MoveUpAnim();
+
 		}
 	}
 	else if (DirectionInput.X < DirectionThreshold)
@@ -94,14 +99,20 @@ void AOurPawn::Tick(float DeltaTime)
 		if (DirectionInput.Y < -DirectionThreshold)
 		{
 			InputDirection = DirectionDownAtom;
+			if (IsDoingMove == false)
+					MoveDownAnim();
 		}
 		else if (DirectionInput.Y < DirectionThreshold)
 		{
 			InputDirection = DirectionNeutralAtom;
+			if (IsDoingMove == false)
+					SetIdleAnim();
 		}
 		else
 		{
 			InputDirection = DirectionUpAtom;
+			if (IsDoingMove == false)
+					MoveUpAnim();
 		}
 	}
 	else
@@ -117,6 +128,9 @@ void AOurPawn::Tick(float DeltaTime)
 		else
 		{
 			InputDirection = DirectionUpForwardAtom;
+			if (IsDoingMove == false)
+					MoveUpAnim();
+
 		}
 	}
 	InputStream.Add(InputDirection);

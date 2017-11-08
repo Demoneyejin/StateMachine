@@ -14,6 +14,11 @@
 class UCombos;
 class UOurMovementComponent;
 
+enum class EFacing {
+	Up,
+	Down
+};
+
 UCLASS()
 class STATEMACHINEPLUGIN_API AOurPawn : public APawn
 {
@@ -84,6 +89,16 @@ protected:
 	UFUNCTION(BlueprintImplementableEvent)
 	void DoMove(UCombos* NewMove);
 
+	UFUNCTION(BlueprintImplementableEvent)
+	void MoveUpAnim();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void MoveDownAnim();
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	void SetIdleAnim();
+
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -106,7 +121,6 @@ private:
 
 	UPROPERTY(VisibleAnywhere)
 	UPaperFlipbookComponent* OurFlipbook;
-
 
 	UPROPERTY(VisibleAnywhere)
 	bool IsDoingMove = false;
